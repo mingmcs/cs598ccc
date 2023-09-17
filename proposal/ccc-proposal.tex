@@ -13,246 +13,255 @@
 \begin{document}
 
 \title{CS598 CCC Proposal\\
-\thanks{Identify applicable funding agency here. If none, delete this.}
 }
 
 \author{
 \IEEEauthorblockN{Cameron Greenwalt}
 \IEEEauthorblockA{
 \textit{UIUC}\\
-Champaign, USA \\
+Champaign, IL, USA \\
 cg50@illinois.edu}
 \and
 \IEEEauthorblockN{Ming Meng}
 \IEEEauthorblockA{
 \textit{UIUC}\\
-Champaign, USA \\
+Champaign, IL, USA \\
 mingm4@illinois.edu}
 \and
 \IEEEauthorblockN{Yang Peng}
 \IEEEauthorblockA{
 \textit{UIUC}\\
-Champaign, USA \\
+Champaign, IL, USA \\
 yangp3@illinois.edu}
 }
 \maketitle
 
-\begin{abstract}
-This document is a model and instructions for \LaTeX.
-This and the IEEEtran.cls file define the components of your paper [title, text, heads, etc.]. *CRITICAL: Do Not Use Symbols, Special Characters, Footnotes, 
-or Math in Paper Title or Abstract.
-\end{abstract}
 
-\begin{IEEEkeywords}
-component, formatting, style, styling, insert
-\end{IEEEkeywords}
+\section{Introduction and Project Idea}
 
-\section{Introduction}
-This document is a model and instructions for \LaTeX.
-Please observe the conference page limits. 
+AIOps, known as Artificial Intelligence for IT Operations, is a fairly recent development that focuses on applying machine learning to the IT Operations Space. AIOps is currently a hot area within the Cloud Computing Infrastructure. Many major technology corporations such as IBM and Microsoft \cite{li2022an}  are actively conducting research in the area of AIOps. \cite{aiops-challenges} 
 
-\section{Ease of Use}
+One of the major concerns with AIOps in the industry is data privacy. Currently, when using proprietary/confidential data to train models, the data needs to be masked in some way to ensure security, which can require extensive time, preparation, and computational resources. Another big challenge in AIOps is that the cost and time required for training the models are often massive. We would like to use pre-trained Large Language Models (LLM) in the AIOps field and determine whether they can be used to remedy these challenges.
 
-\subsection{Maintaining the Integrity of the Specifications}
+LLMs have seen tremendous recent breakthroughs, especially in the generative AI space. ChatGPT, which uses OpenAI's GPT 3.5 LLM, was publicly released in late 2022 and had immediate major impacts in many fields. Much research in the industry has been focused on applying LLM and generative chatbots such as ChatGPT to different domains. 
 
-The IEEEtran class file is used to format your paper and style the text. All margins, 
-column widths, line spaces, and text fonts are prescribed; please do not 
-alter them. You may note peculiarities. For example, the head margin
-measures proportionately more than is customary. This measurement 
-and others are deliberate, using specifications that anticipate your paper 
-as one part of the entire proceedings, and not as an independent document. 
-Please do not revise any of the current designations.
+In this project, we aim to address data privacy concerns and avoid training an existing open source model \cite{network-log-anomaly-detection}  by 1) creating embedding vectors from the proprietary/confidential data source and 2) feeding those embedding vectors the latest state-of-art pre-trained LLM models available in the Azure Cloud.
 
-\section{Prepare Your Paper Before Styling}
-Before you begin to format your paper, first write and save the content as a 
-separate text file. Complete all content and organizational editing before 
-formatting. Please note sections \ref{AA}--\ref{SCM} below for more information on 
-proofreading, spelling and grammar.
+Common AIOps tasks include, but are not limited to, log anomaly detection \cite{network-log-anomaly-detection}, node failure prediction \cite{aiops-node-failures-alibaba}, CI/CD of ML apps \cite{mlops-ossara}, test case generation and bug detection \cite{model-checking-guided-testing}, task code generation \cite{mani2023enhancing}, incident management \cite{chen2020aiops, li2022an}, and documentation Q\&A/source code understanding \cite{source-code-understanding}. We will apply the latest state-of-art LLM models in our proposed framework to at least one of these AIOps tasks and report our results.
 
-Keep your text and graphic files separate until after the text has been 
-formatted and styled. Do not number text heads---{\LaTeX} will do that 
-for you.
 
-\subsection{Abbreviations and Acronyms}\label{AA}
-Define abbreviations and acronyms the first time they are used in the text, 
-even after they have been defined in the abstract. Abbreviations such as 
-IEEE, SI, MKS, CGS, ac, dc, and rms do not have to be defined. Do not use 
-abbreviations in the title or heads unless they are unavoidable.
+\section{Justification}
+In this section, we present the justifications of the project idea. We believe that this project fulfills all three areas of Intellectual Merit, Novelty, and impact.
 
-\subsection{Units}
+\subsection{Intellectual Merit}
+Currently, many researches in AIOps are done using models such as BERT \cite{network-log-anomaly-detection} and then further trained and finetuned using its own data. The results however are dismal \cite{network-log-anomaly-detection} in many categories due to issues such as proprietary data availability for training, open source model limitations, and limited GPU resources required to train the model. These challenges have hindered some of the development efforts in AIOps area.
+In this project, we will create embedding vectors from proprietary data, use the embeddings as the datasource for finetuning an existing LLM (GPT 3.5) in Azure Cloud, and apply the fine-tuned model to at least one common AIOps task.
+Since Azure Cloud is used by many big corporations, we believe that it should address the privacy concerns of proprietary data used for training a model.
+
+For the above reasons, we believe that exploring common AIOps tasks using the latest state-of-art LLM should yield some interesting results.
+
+\subsection{Novelty and Impact}
+AIOps has been around for a while. However, as LLM is quite new and has only recently gained popularity due to the release of ChatGPT, most AIOps research still revolves around improving an existing model through further training or applying traditional ML and DL techniques \cite{network-log-anomaly-detection}. Improving an existing model can be a very expensive operation due to the amount of GPU required. Many businesses are unable to allocate the resources required to train a model from scratch. Using traditional ML and DL techniques requires expert domain and ML knowledge and often still requires expensive computation resources for training data.
+
+By using pre-trained state-of-art models from existing Cloud Providers and providing the models with proprietary data, one can save computational resources and money by avoiding fine-tuning or training a model from scratch. This would be a more cost-effective way for businesses' IT teams to roll out AIOps solutions. This will in turn help the business' Site Reliability Engineers (SRE) to more effectively address cloud incidents.
+
+If our experiments yield good results, we believe that our work will have a great impact to the AIOps field and that many non-tech companies can apply our methods in small teams of engineers to monitor and improve a company's complex cloud infrastructure environments.
+
+\section{Preliminary plan}
+We will start simple and then expand into more difficult tasks.
+There are a few difficult areas identified for this project:
 \begin{itemize}
-\item Use either SI (MKS) or CGS as primary units. (SI units are encouraged.) English units may be used as secondary units (in parentheses). An exception would be the use of English units as identifiers in trade, such as ``3.5-inch disk drive''.
-\item Avoid combining SI and CGS units, such as current in amperes and magnetic field in oersteds. This often leads to confusion because equations do not balance dimensionally. If you must use mixed units, clearly state the units for each quantity that you use in an equation.
-\item Do not mix complete spellings and abbreviations of units: ``Wb/m\textsuperscript{2}'' or ``webers per square meter'', not ``webers/m\textsuperscript{2}''. Spell out units when they appear in text: ``. . . a few henries'', not ``. . . a few H''.
-\item Use a zero before decimal points: ``0.25'', not ``.25''. Use ``cm\textsuperscript{3}'', not ``cc''.)
+    \item Dataset selection
+    \item Creating embeddings and storing them in Vector stores
+    \item Integration with Azure AI Services
+    \item Usability
+    \item Achieving Good Results
+\end{itemize}
+For data input, we will start with a simple pdf document, then try log data, technical documentations and specifications, cloud service configurations, and even source code (if time and intermediate results allow).
+In order to make the service usable, we will identify scenarios that are common to current AIOps trends, which often includes incidents management and root cause analysis.
+
+\subsection{What system do you want to implement?}\label{AA}
+The system which we are going to implement is known as "A general AIOps framework using LLM-generated results". The system involves a user passing data to prompt generator and then entering a natural language query to the chatbot. The chatbot then generates a response by utilizing the query embeddings from the vector store.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{arch.png}
+    \caption{A proposed AIOps framework using LLM-generated results}
+    \label{fig:arch}
+\end{figure} 
+
+Figure \ref{fig:arch} above shows the proposed implementation of the system. The chatbot can be either UI or API based. The vector store can be on Redis or the Azure's Cloud AI vector store. We will use Redis in our implementation. The ADA embedding model will convert the provided data source into vector embeddings, which will get stores in Redis. The chatbot then calls OpenAI ChatGPT model from Azure and generates the result. We will validate the generated result against a predefined text file for accuracy. 
+
+There are a few key sections here for implementation: 
+\begin{enumerate}
+    \item Use of embedding model 
+    \item Use of vector store 
+    \item Output validation 
+    \item Input data selection
+    \item Methods of generating prompt responses using a LLM
+\end{enumerate}
+
+Each section has its own challenges and will significantly affect the result.
+
+
+\subsection{What experiments do you think you'd need}
+As stated we plan to start with something simple first to validate that the data flow works before performing a more complex task.
+
+For the first experiment, we will select a simple pdf technical documentation of a cloud environment for our datasource to validate that the generated result of a simple prompt works fine. It could be a simple question such as "how-to" type of questions.
+
+Then, we will start using AIOps tasks for our datasource. Data inputs for these tasks would probably include logs from different systems such as kubernetes, spark, cloud applications running on serverless environments, and network. This would be the main part of our experiment, in which we would measure the accuracy of the LLM on AIOps tasks.
+
+We have read many research papers in regards to AIOps and those are detailed in the references section. We believe that we have a good grasp now on what type of logs we would like to experiment on and how the validation would work. 
+
+Finally, if time permits, we could potentially extend this framework for further usages such as  to catch bugs for proprietary code, make design documents based on specifications and current proprietary architecture, and generate test cases for proprietary code. Whether we would want to proceed with this type of experiment or not will depend on whether we have time and the resources and whether our main goal of measuring AIOps is accomplished with good accuracy. 
+
+\section{Summary}
+
+Overall, we believe that our system is going to benefit companies of all sizes and improve their IT Operations workflows in a modern complex cloud infrastructure, as they often are unable to allocate the necessary resources and budget to train and finetune large ML models. We expect the following stakeholders to benefit from this project:
+\begin{itemize}
+    \item Site Reliability Engineers
+    \item Platform Engineers 
+    \item Management Audience 
+    \item Incident Commanders 
 \end{itemize}
 
-\subsection{Equations}
-Number equations consecutively. To make your 
-equations more compact, you may use the solidus (~/~), the exp function, or 
-appropriate exponents. Italicize Roman symbols for quantities and variables, 
-but not Greek symbols. Use a long dash rather than a hyphen for a minus 
-sign. Punctuate equations with commas or periods when they are part of a 
-sentence, as in:
-\begin{equation}
-a+b=\gamma\label{eq}
-\end{equation}
+We expect that SREs and Platform Engineers are the stakeholders that will benefit the most as our framework can used as an assistance tool for SREs when when performing Root Cause Analysis and can also be used to as a companion to the existing rule-based alerting tools \cite{model-checking-guided-testing}. Management Audience can use this tool to understand the current situation of the infrastructure without knowing many technical details. The incident commander can use this tool to ensure that the analysis is flowing in the right direction. Finally, we believe now is an optimal time to incorporate Generative AI into the corporate world within the IT Operations field. We hope this framework can transform how incident management, alerting, and root cause analysis are performed. 
 
-Be sure that the 
-symbols in your equation have been defined before or immediately following 
-the equation. Use ``\eqref{eq}'', not ``Eq.~\eqref{eq}'' or ``equation \eqref{eq}'', except at 
-the beginning of a sentence: ``Equation \eqref{eq} is . . .''
 
-\subsection{\LaTeX-Specific Advice}
+\bibliographystyle{plain}
+\bibliography{proposal}
+\vspace{12pt}
 
-Please use ``soft'' (e.g., \verb|\eqref{Eq}|) cross references instead
-of ``hard'' references (e.g., \verb|(1)|). That will make it possible
-to combine sections, add equations, or change the order of figures or
-citations without having to go through the file line by line.
+\end{document}
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{url} 
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
 
-Please don't use the \verb|{eqnarray}| equation environment. Use
-\verb|{align}| or \verb|{IEEEeqnarray}| instead. The \verb|{eqnarray}|
-environment leaves unsightly spaces around relation symbols.
+\title{CS598 CCC Proposal\\
+}
 
-Please note that the \verb|{subequations}| environment in {\LaTeX}
-will increment the main equation counter even when there are no
-equation numbers displayed. If you forget that, you might write an
-article in which the equation numbers skip from (17) to (20), causing
-the copy editors to wonder if you've discovered a new method of
-counting.
+\author{
+\IEEEauthorblockN{Cameron Greenwalt}
+\IEEEauthorblockA{
+\textit{UIUC}\\
+Champaign, IL, USA \\
+cg50@illinois.edu}
+\and
+\IEEEauthorblockN{Ming Meng}
+\IEEEauthorblockA{
+\textit{UIUC}\\
+Champaign, IL, USA \\
+mingm4@illinois.edu}
+\and
+\IEEEauthorblockN{Yang Peng}
+\IEEEauthorblockA{
+\textit{UIUC}\\
+Champaign, IL, USA \\
+yangp3@illinois.edu}
+}
+\maketitle
 
-{\BibTeX} does not work by magic. It doesn't get the bibliographic
-data from thin air but from .bib files. If you use {\BibTeX} to produce a
-bibliography you must send the .bib files. 
 
-{\LaTeX} can't read your mind. If you assign the same label to a
-subsubsection and a table, you might find that Table I has been cross
-referenced as Table IV-B3. 
+\section{Introduction and Project Idea}
 
-{\LaTeX} does not have precognitive abilities. If you put a
-\verb|\label| command before the command that updates the counter it's
-supposed to be using, the label will pick up the last counter to be
-cross referenced instead. In particular, a \verb|\label| command
-should not go before the caption of a figure or a table.
+AIOps, known as Artificial Intelligence for IT Operations, is a fairly recent development that focuses on applying machine learning to the IT Operations Space. AIOps is currently a hot area within the Cloud Computing Infrastructure. Many major technology corporations such as IBM and Microsoft \cite{li2022an}  are actively conducting research in the area of AIOps. \cite{aiops-challenges} 
 
-Do not use \verb|\nonumber| inside the \verb|{array}| environment. It
-will not stop equation numbers inside \verb|{array}| (there won't be
-any anyway) and it might stop a wanted equation number in the
-surrounding equation.
+One of the major concerns with AIOps in the industry is data privacy. Currently, when using proprietary/confidential data to train models, the data needs to be masked in some way to ensure security, which can require extensive time, preparation, and computational resources. Another big challenge in AIOps is that the cost and time required for training the models are often massive. We would like to use pre-trained Large Language Models (LLM) in the AIOps field and determine whether they can be used to remedy these challenges.
 
-\subsection{Some Common Mistakes}\label{SCM}
+LLMs have seen tremendous recent breakthroughs, especially in the generative AI space. ChatGPT, which uses OpenAI's GPT 3.5 LLM, was publicly released in late 2022 and had immediate major impacts in many fields. Much research in the industry has been focused on applying LLM and generative chatbots such as ChatGPT to different domains. 
+
+In this project, we aim to address data privacy concerns and avoid training an existing open source model \cite{network-log-anomaly-detection}  by 1) creating embedding vectors from the proprietary/confidential data source and 2) feeding those embedding vectors the latest state-of-art pre-trained LLM models available in the Azure Cloud.
+
+Common AIOps tasks include, but are not limited to, log anomaly detection \cite{network-log-anomaly-detection}, node failure prediction \cite{aiops-node-failures-alibaba}, CI/CD of ML apps \cite{mlops-ossara}, test case generation and bug detection \cite{model-checking-guided-testing}, task code generation \cite{mani2023enhancing}, incident management \cite{chen2020aiops, li2022an}, and documentation Q\&A/source code understanding \cite{source-code-understanding}. We will apply the latest state-of-art LLM models in our proposed framework to at least one of these AIOps tasks and report our results.
+
+
+\section{Justification}
+In this section, we present the justifications of the project idea. We believe that this project fulfills all three areas of Intellectual Merit, Novelty, and impact.
+
+\subsection{Intellectual Merit}
+Currently, many researches in AIOps are done using models such as BERT \cite{network-log-anomaly-detection} and then further trained and finetuned using its own data. The results however are dismal \cite{network-log-anomaly-detection} in many categories due to issues such as proprietary data availability for training, open source model limitations, and limited GPU resources required to train the model. These challenges have hindered some of the development efforts in AIOps area.
+In this project, we will create embedding vectors from proprietary data, use the embeddings as the datasource for finetuning an existing LLM (GPT 3.5) in Azure Cloud, and apply the fine-tuned model to at least one common AIOps task.
+Since Azure Cloud is used by many big corporations, we believe that it should address the privacy concerns of proprietary data used for training a model.
+
+For the above reasons, we believe that exploring common AIOps tasks using the latest state-of-art LLM should yield some interesting results.
+
+\subsection{Novelty and Impact}
+AIOps has been around for a while. However, as LLM is quite new and has only recently gained popularity due to the release of ChatGPT, most AIOps research still revolves around improving an existing model through further training or applying traditional ML and DL techniques \cite{network-log-anomaly-detection}. Improving an existing model can be a very expensive operation due to the amount of GPU required. Many businesses are unable to allocate the resources required to train a model from scratch. Using traditional ML and DL techniques requires expert domain and ML knowledge and often still requires expensive computation resources for training data.
+
+By using pre-trained state-of-art models from existing Cloud Providers and providing the models with proprietary data, one can save computational resources and money by avoiding fine-tuning or training a model from scratch. This would be a more cost-effective way for businesses' IT teams to roll out AIOps solutions. This will in turn help the business' Site Reliability Engineers (SRE) to more effectively address cloud incidents.
+
+If our experiments yield good results, we believe that our work will have a great impact to the AIOps field and that many non-tech companies can apply our methods in small teams of engineers to monitor and improve a company's complex cloud infrastructure environments.
+
+\section{Preliminary plan}
+We will start simple and then expand into more difficult tasks.
+There are a few difficult areas identified for this project:
 \begin{itemize}
-\item The word ``data'' is plural, not singular.
-\item The subscript for the permeability of vacuum $\mu_{0}$, and other common scientific constants, is zero with subscript formatting, not a lowercase letter ``o''.
-\item In American English, commas, semicolons, periods, question and exclamation marks are located within quotation marks only when a complete thought or name is cited, such as a title or full quotation. When quotation marks are used, instead of a bold or italic typeface, to highlight a word or phrase, punctuation should appear outside of the quotation marks. A parenthetical phrase or statement at the end of a sentence is punctuated outside of the closing parenthesis (like this). (A parenthetical sentence is punctuated within the parentheses.)
-\item A graph within a graph is an ``inset'', not an ``insert''. The word alternatively is preferred to the word ``alternately'' (unless you really mean something that alternates).
-\item Do not use the word ``essentially'' to mean ``approximately'' or ``effectively''.
-\item In your paper title, if the words ``that uses'' can accurately replace the word ``using'', capitalize the ``u''; if not, keep using lower-cased.
-\item Be aware of the different meanings of the homophones ``affect'' and ``effect'', ``complement'' and ``compliment'', ``discreet'' and ``discrete'', ``principal'' and ``principle''.
-\item Do not confuse ``imply'' and ``infer''.
-\item The prefix ``non'' is not a word; it should be joined to the word it modifies, usually without a hyphen.
-\item There is no period after the ``et'' in the Latin abbreviation ``et al.''.
-\item The abbreviation ``i.e.'' means ``that is'', and the abbreviation ``e.g.'' means ``for example''.
+    \item Dataset selection
+    \item Creating embeddings and storing them in Vector stores
+    \item Integration with Azure AI Services
+    \item Usability
+    \item Achieving Good Results
 \end{itemize}
-An excellent style manual for science writers is \cite{ruoccofabrizio}.
+For data input, we will start with a simple pdf document, then try log data, technical documentations and specifications, cloud service configurations, and even source code (if time and intermediate results allow).
+In order to make the service usable, we will identify scenarios that are common to current AIOps trends, which often includes incidents management and root cause analysis.
 
-\subsection{Authors and Affiliations}
-\textbf{The class file is designed for, but not limited to, six authors.} A 
-minimum of one author is required for all conference articles. Author names 
-should be listed starting from left to right and then moving down to the 
-next line. This is the author sequence that will be used in future citations 
-and by indexing services. Names should not be listed in columns nor group by 
-affiliation. Please keep your affiliations as succinct as possible (for 
-example, do not differentiate among departments of the same organization).
+\subsection{What system do you want to implement?}\label{AA}
+The system which we are going to implement is known as "A general AIOps framework using LLM-generated results". The system involves a user passing data to prompt generator and then entering a natural language query to the chatbot. The chatbot then generates a response by utilizing the query embeddings from the vector store.
 
-\subsection{Identify the Headings}
-Headings, or heads, are organizational devices that guide the reader through 
-your paper. There are two types: component heads and text heads.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{arch.png}
+    \caption{A proposed AIOps framework using LLM-generated results}
+    \label{fig:arch}
+\end{figure} 
 
-Component heads identify the different components of your paper and are not 
-topically subordinate to each other. Examples include Acknowledgments and 
-References and, for these, the correct style to use is ``Heading 5''. Use 
-``figure caption'' for your Figure captions, and ``table head'' for your 
-table title. Run-in heads, such as ``Abstract'', will require you to apply a 
-style (in this case, italic) in addition to the style provided by the drop 
-down menu to differentiate the head from the text.
+Figure \ref{fig:arch} above shows the proposed implementation of the system. The chatbot can be either UI or API based. The vector store can be on Redis or the Azure's Cloud AI vector store. We will use Redis in our implementation. The ADA embedding model will convert the provided data source into vector embeddings, which will get stores in Redis. The chatbot then calls OpenAI ChatGPT model from Azure and generates the result. We will validate the generated result against a predefined text file for accuracy. 
 
-Text heads organize the topics on a relational, hierarchical basis. For 
-example, the paper title is the primary text head because all subsequent 
-material relates and elaborates on this one topic. If there are two or more 
-sub-topics, the next level head (uppercase Roman numerals) should be used 
-and, conversely, if there are not at least two sub-topics, then no subheads 
-should be introduced.
+There are a few key sections here for implementation: 
+\begin{enumerate}
+    \item Use of embedding model 
+    \item Use of vector store 
+    \item Output validation 
+    \item Input data selection
+    \item Methods of generating prompt responses using a LLM
+\end{enumerate}
 
-\subsection{Figures and Tables}
-\paragraph{Positioning Figures and Tables} Place figures and tables at the top and 
-bottom of columns. Avoid placing them in the middle of columns. Large 
-figures and tables may span across both columns. Figure captions should be 
-below the figures; table heads should appear above the tables. Insert 
-figures and tables after they are cited in the text. Use the abbreviation 
-``Fig.~\ref{fig-arch}'', even at the beginning of a sentence.
-
-\begin{table}[htbp]
-\caption{Table Type Styles}
-\begin{center}
-\begin{tabular}{|c|c|c|c|}
-\hline
-\textbf{Table}&\multicolumn{3}{|c|}{\textbf{Table Column Head}} \\
-\cline{2-4} 
-\textbf{Head} & \textbf{\textit{Table column subhead}}& \textbf{\textit{Subhead}}& \textbf{\textit{Subhead}} \\
-\hline
-copy& More table copy$^{\mathrm{a}}$& &  \\
-\hline
-\multicolumn{4}{l}{$^{\mathrm{a}}$Sample of a Table footnote.}
-\end{tabular}
-\label{tab1}
-\end{center}
-\end{table}
-
-\begin{figure}[!ht]
-\centerline{\includegraphics[width=210pt]{fig-arch.png}}
-\caption{Example of a figure caption.}
-\label{fig-arch}
-\end{figure}
+Each section has its own challenges and will significantly affect the result.
 
 
-Figure Labels: Use 8 point Times New Roman for Figure labels. Use words 
-rather than symbols or abbreviations when writing Figure axis labels to 
-avoid confusing the reader. As an example, write the quantity 
-``Magnetization'', or ``Magnetization, M'', not just ``M''. If including 
-units in the label, present them within parentheses. Do not label axes only 
-with units. In the example, write ``Magnetization (A/m)'' or ``Magnetization 
-\{A[m(1)]\}'', not just ``A/m''. Do not label axes with a ratio of 
-quantities and units. For example, write ``Temperature (K)'', not 
-``Temperature/K''.
+\subsection{What experiments do you think you'd need}
+As stated we plan to start with something simple first to validate that the data flow works before performing a more complex task.
 
-\section*{Acknowledgment}
+For the first experiment, we will select a simple pdf technical documentation of a cloud environment for our datasource to validate that the generated result of a simple prompt works fine. It could be a simple question such as "how-to" type of questions.
 
-The preferred spelling of the word ``acknowledgment'' in America is without 
-an ``e'' after the ``g''. Avoid the stilted expression ``one of us (R. B. 
-G.) thanks $\ldots$''. Instead, try ``R. B. G. thanks$\ldots$''. Put sponsor 
-acknowledgments in the unnumbered footnote on the first page.
+Then, we will start using AIOps tasks for our datasource. Data inputs for these tasks would probably include logs from different systems such as kubernetes, spark, cloud applications running on serverless environments, and network. This would be the main part of our experiment, in which we would measure the accuracy of the LLM on AIOps tasks.
 
-\section*{References}
+We have read many research papers in regards to AIOps and those are detailed in the references section. We believe that we have a good grasp now on what type of logs we would like to experiment on and how the validation would work. 
 
-Please number citations consecutively within brackets \cite{li2022an}. The 
-sentence punctuation follows the bracket \cite{chen2020aiops}. Refer simply to the reference 
-number, as in \cite{ruoccofabrizio}---do not use ``Ref. \cite{ruoccofabrizio}'' or ``reference \cite{ruoccofabrizio}'' except at 
-the beginning of a sentence: ``Reference \cite{ruoccofabrizio} was the first $\ldots$''
+Finally, if time permits, we could potentially extend this framework for further usages such as  to catch bugs for proprietary code, make design documents based on specifications and current proprietary architecture, and generate test cases for proprietary code. Whether we would want to proceed with this type of experiment or not will depend on whether we have time and the resources and whether our main goal of measuring AIOps is accomplished with good accuracy. 
 
-Number footnotes separately in superscripts. Place the actual footnote at 
-the bottom of the column in which it was cited. Do not put footnotes in the 
-abstract or reference list. Use letters for table footnotes.
+\section{Summary}
 
-Unless there are six authors or more give all authors' names; do not use 
-``et al.''. Papers that have not been published, even if they have been 
-submitted for publication, should be cited as ``unpublished'' \cite{ruoccofabrizio}. Papers 
-that have been accepted for publication should be cited as ``in press'' \cite{ruoccofabrizio}. 
-Capitalize only the first word in a paper title, except for proper nouns and 
-element symbols.
+Overall, we believe that our system is going to benefit companies of all sizes and improve their IT Operations workflows in a modern complex cloud infrastructure, as they often are unable to allocate the necessary resources and budget to train and finetune large ML models. We expect the following stakeholders to benefit from this project:
+\begin{itemize}
+    \item Site Reliability Engineers
+    \item Platform Engineers 
+    \item Management Audience 
+    \item Incident Commanders 
+\end{itemize}
 
-For papers published in translation journals, please give the English 
-citation first, followed by the original foreign-language citation \cite{ruoccofabrizio}.
+We expect that SREs and Platform Engineers are the stakeholders that will benefit the most as our framework can used as an assistance tool for SREs when when performing Root Cause Analysis and can also be used to as a companion to the existing rule-based alerting tools \cite{model-checking-guided-testing}. Management Audience can use this tool to understand the current situation of the infrastructure without knowing many technical details. The incident commander can use this tool to ensure that the analysis is flowing in the right direction. Finally, we believe now is an optimal time to incorporate Generative AI into the corporate world within the IT Operations field. We hope this framework can transform how incident management, alerting, and root cause analysis are performed. 
+
 
 \bibliographystyle{plain}
 \bibliography{proposal}
