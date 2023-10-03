@@ -1,0 +1,188 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{url} 
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{CS598 CCC Proposal\\
+}
+
+\author{
+\IEEEauthorblockN{Cameron Greenwalt}
+\IEEEauthorblockA{
+\textit{UIUC}\\
+Champaign, IL, USA \\
+cg50@illinois.edu}
+\and
+\IEEEauthorblockN{Ming Meng}
+\IEEEauthorblockA{
+\textit{UIUC}\\
+Champaign, IL, USA \\
+mingm4@illinois.edu}
+\and
+\IEEEauthorblockN{Yang Peng}
+\IEEEauthorblockA{
+\textit{UIUC}\\
+Champaign, IL, USA \\
+yangp3@illinois.edu}
+}
+\maketitle
+
+
+\section{AIops with Incident Management}
+
+LLMs. Prompt-engineering research has surged recently, and is necessary to utilize LLMs to their full potential. Some approaches attempt to improve the reasoning quality of LLMs through chain-of-though and scratch-padding, some aim to keep the LLM self-consistent, some use debating among multiple models to improve results, some verify the response. Some approaches provide general-purpose techniques that teach LLMs to use tools, some retrieve useful text from a large corpus and put in context when needed, whilst others provide a systematic architecture for tools to use LLMs. Prior work processes multi-modal data (e.g., image, audio, text, etc.) with LLMs without explicit training\cite{hamadanian2023a} 
+
+Recent advances large language models like GPT-3/4, which have been used to solve a variety of problems ranging from question answering to text summarization. 
+
+some study explored how to generating a chain of thought---a series of intermediate reasoning steps---significantly improves the ability of large language models to perform complex reasoning\cite{wei2022chain}
+
+some study demonstrate that scaling up language models greatly improves task-agnostic, few-shot performance, sometimes even becoming competitive with prior state-of-the-art fine-tuning approaches. GPT-3 achieves strong performance on many NLP datasets, including translation, question-answering, and cloze tasks\cite{brown2020language}
+
+LLM also widely adopted to use for programing like Codex, which is a GPT language model fine-tuned on publicly available code from
+GitHub, and study its Python code-writing capabilities \cite{chen2021evaluating}
+
+introduces a LLM for log data which is trained on public and proprietary log data.
+AIOps powered by LLMs offers an efficient and effective solution for automating log analysis tasks and enabling SREs to focus on higher-level task\cite{gupta2023learning}
+
+Incident management in large cloud services has become a popular topic of research in the Systems and Software Engineering communities.  There has been several empirical studies on analyzing incidents and outages in production systems which have focused on studying incidents caused by certain type of issues or issues from specific services and systems.\cite{10172904} 
+
+The following two scenarios was studied using LLM \cite{10172904} 
+
+1) Find the Incident's Root Cause. Diagnosing incidents typically requires significant time and communication before engineers can identify the root cause of the incident. Research showed how effective large language models are at suggesting root causes for incidents\cite{10172904} 
+
+2) Suggest the Mitigation Steps for the Incident. After a root cause has been located, engineers take actions to mitigate the problem. research showed effective large language models are at recommending the mitigation steps for incidents\cite{10172904} 
+
+After researched over 40,000 incidents from 1000+ cloud services with six semantic and lexical metrics at Microsoft.\cite{10172904}  The results shows:
+\begin{itemize}
+    \item Fine-tuning significantly improves the effectiveness of LLMs for incident data.
+    \item GPT-3 and GPT-3.5 models significantly outperform encoder-decoder models in our experiments.
+    \item Metrics such as BLEU-4 are useful to measure relative performance of models in different settings. However, manual inspection and validation with experts is needed to assess the actual performance.
+\end{itemize}
+
+\section{Experiments}
+
+\subsection{Experiment: generate Text summarization}
+\textbf{hypothesis}: LLM model should be able to text(10kb) summarization without training
+\begin{itemize}
+    \item \textbf{model}: gpt-4-32k or gpt-35-turbo-16k 
+    \item \textbf{input}: sample logs
+    \item \textbf{output}: log summarization
+    \item \textbf{measurements}:
+    \begin{itemize}
+        \item correctness
+        \item readability
+        \item Lexical score if possible
+        \item Semantic score if possible
+    \end{itemize}
+\end{itemize}
+
+\subsection{Experiment: generate large Text(>100kb) summarization}
+\textbf{hypothesis}: LLM model should be able to handle large text input
+\begin{itemize}
+    \item \textbf{model}: gpt-4-32k or gpt-35-turbo-16k 
+    \item \textbf{input}: sample logs
+    \item \textbf{output}: log summarization
+    \item \textbf{measurements}:
+    \begin{itemize}
+        \item correctness
+        \item readability
+        \item Lexical score if possible
+        \item Semantic score if possible
+    \end{itemize}
+\end{itemize}
+
+
+\subsection{Experiment: Lexical Metrics}
+\textbf{hypothesis}: we should be able to get lexical score for a given text
+\begin{itemize}
+    \item \textbf{input}: log summarization
+    \item \textbf{output}: lexical score 
+    \item \textbf{measurements}:
+    \begin{itemize}
+        \item human validation
+    \end{itemize}
+\end{itemize}
+
+\subsection{Experiment: Semantic Metrics}
+\textbf{hypothesis}: we should be able to get Semantic score for a given text
+\begin{itemize}
+    \item \textbf{input}: log summarization
+    \item \textbf{output}: Semantic score 
+    \item \textbf{measurements}:
+    \begin{itemize}
+        \item human validation
+    \end{itemize}
+\end{itemize}
+
+\subsection{Experiment: Generate text embedding}
+\textbf{hypothesis}:we should be able to create and store the embedding from the input logs
+\begin{itemize}
+    \item \textbf{model}: ada
+    \item \textbf{input}: sample logs
+    \item \textbf{output}: log embedding
+    \item \textbf{measurements}:
+    \begin{itemize}
+        \item searchable by similarity
+    \end{itemize}
+\end{itemize}
+
+\subsection{Experiment: create the vector store}
+\textbf{hypothesis}:we should be able to store embedding into the vector store
+\begin{itemize}
+    \item \textbf{input}: embedding vector
+    \item \textbf{output}: vector store
+    \item \textbf{measurements}:
+    \begin{itemize}
+        \item embedding should be persistent
+    \end{itemize}
+\end{itemize}
+
+\subsection{Experiment: query embedding}
+\textbf{hypothesis}:we should be able query the embedding from the vector store
+\begin{itemize}
+    \item \textbf{input}: embedding input
+    \item \textbf{output}: embedding output
+    \item \textbf{measurements}:
+    \begin{itemize}
+        \item embedding should be searchable
+    \end{itemize}
+\end{itemize}
+
+
+% \subsection{Experiment with Vector Search}
+% hypothesis: vector search has better performance compare to lexical search.
+
+% Vector search, also commonly known as semantic search, and lexical search work very differently. Lexical search is the kind of search that we’ve all been using for years in OpenSearch and Elasticsearch.with lexical search engines, structured data such as text can easily be tokenized into terms that can be matched at search time, regardless of the true meaning of the terms. 
+
+% On the other side, embedding can turn a piece of unstructured data into a multiple dimensional vecotr. IN fact, the embedding vectors can have several hundreds or even thousands of dimensions and simply represent a point in a multi-dimensional space. Each vector dimension represents a feature or a characteristic, of the unstructured data. and the value of each element in the embedding vector denotes the similarity of that input to a specific dimension.
+
+% In contrast to lexical search, where a term can either be matched or not, with vector search we can get a much better sense of how similar a piece of unstructured data is to each of the dimensions supported by the model. As such, embedding vectors serve as a fantastic semantic representation of unstructured data.
+
+% OpenSearch provide two flavor of s of semantic search. 
+
+% The first option is to leverage the k-NN plugin (k-nearest neighbors) which has been available since version 1.0. k-NN enables searching for the k-nearest neighbors to a query vector across an index of vectors. Neighbors are determined by measuring the distance or similarity between two points in a given multi-dimensional vector space. The shorter the distance between two points, the closer the semantic meaning of the two related vectors.
+
+% The second option is to use the new Neural Search plugin which has been in preview since version 2.5 and was recently made generally available in version 2.9. As we’ll see later in this article, the Neural Search plugin is just a wrapper around the k-NN plugin. Its main advantage is that it works on pre-trained Machine Learning models that can generate text embeddings on the fly, both at ingestion and search time, which is not the case for the k-NN plugin which requires you to create the embeddings using an ad-hoc client library.
+
+% \section{Vector Store}
+% one of the key component is the vector. there are couple choice.
+% 1. using Azure Cognitive search
+% 2. using self hosted data store like redis
+
+
+
+
+\bibliographystyle{plain}
+\bibliography{ref}
+\vspace{12pt}
+
+\end{document}

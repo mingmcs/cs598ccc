@@ -1,0 +1,79 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{url} 
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{CS598 CCC Proposal\\
+}
+
+\author{
+\IEEEauthorblockN{Cameron Greenwalt}
+\IEEEauthorblockA{
+\textit{UIUC}\\
+Champaign, IL, USA \\
+cg50@illinois.edu}
+\and
+\IEEEauthorblockN{Ming Meng}
+\IEEEauthorblockA{
+\textit{UIUC}\\
+Champaign, IL, USA \\
+mingm4@illinois.edu}
+\and
+\IEEEauthorblockN{Yang Peng}
+\IEEEauthorblockA{
+\textit{UIUC}\\
+Champaign, IL, USA \\
+yangp3@illinois.edu}
+}
+\maketitle
+
+\section{AIops with Logs}
+Presently, lots of AIOps tasks use logs as one of the main data sources. Lots of the research papers focus on log anomaly detection and classification tasks, as they are often achievable through fine-tuning an existing model with a few-shot. 
+
+Based on multiple research papers, it appears that BERT is a very popular model that is used for log anomaly detection. The results are quite successful for very specific tasks such as detection and classification, but it also means that the usage is limited to specific scope with lesser impacts. In addition, the BERT base model requires further training and fine-tuning which can be time-consuming and expensive. \cite{Souce https://www.sciencedirect.com/science/article/pii/S156849462300707X}
+
+The anomaly log detection task is proved to be very successful in recent research using an open source pre-trained NLP model such as BERT with further fine-tuning. For a sample HDFS data-sets, the F1 score can achieve more than 0.9 in many scenarios. This can attribute to the reason that HDFS log data consists of a very simple log structure and has less natural language included in the logs. In fact, the authors identified that pre-training BERT further with more natural language data had a negative effect on anomaly detection. \cite{Souce https://www.sciencedirect.com/science/article/pii/S156849462300707X} From the lesson, we identified that LLM is probably more suited for logs with more context of natural language to best make use of it as LLM such as ChatGPT contains much more pre-trained data than other base pre-trained models such as BERT.
+
+Current research on utilizing BERT models for AIOps tasks include using it to build an intelligent-based system for IT Incident Operations. However, the metric scores are quite low just with the BERT models and often require other classifier such as LSTM which are used for remembering the previous steps and increases accuracy. But this might run into overfitting issues as well as using LSTM it remembers the information for long-term which can easily cause overfit scenarios. \cite{Souce https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10189040}
+
+As logs from different applications and systems can be in various formatting, it is important that we have to ingest and parse the logs to the intended formatting for our destination. This means data transformation capabilities are required for the data injectors. Current popular open-source tool that are used to ingest data includes Logstash which is currently compliant with multiple databases and agents like Telegraf. Alternatively, many proprietary software may have its own data transformation capabilities that can be used to avoid having an additional third-party dependency. \cite{Souce https://browse.arxiv.org/pdf/2308.11225.pdf}
+
+Log data can be beneficial for incident management and resolution tasks when we have past incident data. Automation can be performed with efficient ML models to generate diagnosis and resolution steps. This is especially powerful for some urgent cases where the assigned engineer can start diagnosing the issue and perform the generated steps for resolution. However, performing this step requires past incident data which are often proprietary and can be difficult to obtain using publicly available resources online along with the logs that match the incident data. \cite{Souce https://browse.arxiv.org/pdf/2308.11225.pdf}
+
+Generating summaries from log data has also been discussed as future possible research. LLM is very useful in this aspect and can be used especially for this kind of application. Especially, the ChatGPT model is more accurate than many other open source models that are presently available and does not require further training on its own. In the near future, open-source LLM may progress further which can be used to train and deployed on-premise. But presently the ChatGPT model is used as a golden benchmark for most generative AI tasks.\cite{Souce https://browse.arxiv.org/pdf/2308.11225.pdf} 
+
+Presently, server logs are also often used to determine the frequency of page access, access and browsing patterns, and is a field of web mining development. It is used in all aspects on the Cloud environment, including e-commerce, corporate email servers, and web reports. It provides information to improve the businesses or systems in terms of user experience and revenue forecasts. \cite{Source https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9898279}
+
+However, logs alone are often not enough to offer any insights that are useful in terms of AIOps. Using documents, knowledge articles, and/or past incident investigations data are often necessary to have AI to derive a summarizing or root cause. Some of the data points which are often used with logs include a company's internal root cause knowledge source database, technical documentation on the application or systems, troubleshooting guides, or even the history of bug fixes in the release notes. These information are often unstructured but are crucial for the analysis and summaries. \cite{Souce https://dl-acm-org.proxy2.library.illinois.edu/doi/pdf/10.1145/3510457.3513030}
+
+Within the near past years before ChatGPT API was released, the summarizing part for an AI generated incident analysis is often done through a base pre-trained model with further fine-tuning. One of the popular models that's used is RoBERTa, which is itself a BERT derivative and the authors further fine-tuned on other external or internal datasets, often borrowing popular new websites and articles. \cite{Souce https://dl-acm-org.proxy2.library.illinois.edu/doi/pdf/10.1145/3510457.3513030}
+
+Logs are often in semi-structured and in some cases even in unstructured formatting. There are no golden standard for logging specifications and even leading companies like Microsoft and Google had issues with finding a systematic way to guide its developers to agree on a single logging practice. Therefore, challenges arise on log parsing and that the traditional way is to rely on regular expressions, keywords, grammar, algorithms, or even statistics to parse and read the logs. \cite{Souce https://link.springer.com/article/10.1007/s11036-021-01832-3#Sec3}
+
+One of the current popular ways of parsing logs is through some sort of Clustering, Pattern Mining, and tree-based algorithms. LogMine and LogMa are two popular log parses which uses the idea of clustering with either a K-means algorithm or a hierarchical clustering algorithm. SLCT and LogCluster looks for frequent log file items and perform some kind of frequent pattern mining. SHISO creates a structured tree from the nodes generated from logs, and users CAN retrieves log types and parameters from the tree through a log mine. \cite{Souce https://link.springer.com/article/10.1007/s11036-021-01832-3#Sec3}
+
+Applying language model is still a quite new field in terms of parsing and mining logs and recent researches come from Pre-ChatGPT times. Logram uses traditional NLP methods such as leveraging n-gram dictionaries to achieve such tasks. \cite{Souce https://link.springer.com/article/10.1007/s11036-021-01832-3#Sec3}
+
+Prompt generation is often an issue with ChatGPT as an incorrect prompt could lead to incorrect answers. The prompt needs to be carefully constructed and tuned to generate a specific prompt. Embeddings needs to be used as Example selection during the inference phase so that when the user issues a sample input, the system would match the existing embeddings and automatically draft a prompt with relevant information to feed into ChatGPT. Note that logs can belong to non-text input and can exceed the input limit for a lot of LLMs. For example, ChatGPT 3.5 has a 3000 words input limitations. To address this issue, some solutions are proposed to use embed non-text features and incorporate them with user input to generate text input features. \cite{Source https://dbgroup.cs.tsinghua.edu.cn/ligl/papers/dbgpt-dse.pdf}
+
+Overall, the applications of LLM is relatively within the field of AIOps. There are even authors acknowledging that their future research direction is to incorporate the use of LLM such as ChatGPT into their existing AIOps research. \cite{Souce https://browse.arxiv.org/pdf/2308.11225.pdf} We believe that it is the perfect time for us to do so and incorporate this new AI Generation wave in AIOps with application in the log analysis and log summary fields.
+
+
+
+
+
+
+\bibliographystyle{plain}
+\bibliography{ref}
+\vspace{12pt}
+
+\end{document}
