@@ -1,0 +1,224 @@
+ref,gen3,gen4,log
+['Processed session termination; Processed session termination; Connection request will be dropped;'],"{
+  ""summary"": ""Processed session terminations and expirations, accepted socket connection, warnings, and closed socket connection."",
+  ""anomaly"": ""None""
+}","{""summary"": ""Multiple session terminations processed, some sessions expired due to timeout, one client connection closed."", ""anomaly"": ""Old client connection request, end of stream exception caught.""}","INFO Processed session termination for sessionid : 0x34ede65503f002f
+INFO Processed session termination for sessionid : 0x34ede65503f0032
+INFO Processed session termination for sessionid : 0x24ede63a01b003d
+INFO Processed session termination for sessionid : 0x24ede63a01b003c
+INFO Processed session termination for sessionid : 0x24ede63a01b003b
+INFO Processed session termination for sessionid : 0x34ede65503f0031
+INFO Processed session termination for sessionid : 0x34ede65503f0030
+INFO Processed session termination for sessionid : 0x24ede63a01b003e
+INFO Expiring session 0x24ede63a01b0045 , timeout of 10000ms exceeded
+INFO Processed session termination for sessionid : 0x24ede63a01b0045
+INFO Expiring session 0x34ede65503f003c , timeout of 20000ms exceeded
+INFO Processed session termination for sessionid : 0x34ede65503f003c
+INFO Expiring session 0x24ede63a01b0044 , timeout of 20000ms exceeded
+INFO Processed session termination for sessionid : 0x24ede63a01b0044
+INFO Accepted socket connection from /10.10.34.11 : 39791
+WARN Connection request from old client /10.10.34.11 : 39791 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.11 : 39791
+INFO Processed session termination for sessionid : 0x34ede65503f0031
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 39791 which had sessionid 0x14ede63a5a70032"
+['caught exception; Closed socket connection; Expiring session; timeout exceeded;'],A,"{""summary"": ""Multiple session terminations and expirations occurred with some stream exceptions."", ""anomaly"": ""Stream exceptions and session timeouts.""}","WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.20 : 56423 which had sessionid 0x14ede63a5a7003c
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.22 : 47297 which had sessionid 0x14ede63a5a7003d
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.12 : 43193 which had sessionid 0x14ede63a5a70038
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.13 : 38070 which had sessionid 0x14ede63a5a70039
+INFO Expiring session 0x34ede65503f0049 , timeout of 10000ms exceeded
+INFO Expiring session 0x34ede65503f004c , timeout of 10000ms exceeded
+INFO Expiring session 0x14ede63a5a7003b , timeout of 10000ms exceeded
+INFO Expiring session 0x24ede63a01b004f , timeout of 10000ms exceeded
+INFO Expiring session 0x34ede65503f004b , timeout of 10000ms exceeded
+INFO Expiring session 0x14ede63a5a7003a , timeout of 10000ms exceeded
+INFO Expiring session 0x34ede65503f004a , timeout of 10000ms exceeded
+INFO Expiring session 0x34ede65503f0048 , timeout of 10000ms exceeded
+INFO Expiring session 0x14ede63a5a7003d , timeout of 10000ms exceeded
+INFO Expiring session 0x14ede63a5a7003c , timeout of 10000ms exceeded
+INFO Processed session termination for sessionid : 0x34ede65503f0049
+INFO Processed session termination for sessionid : 0x34ede65503f004c"
+['Expiring session; timeout exceeded; Processed session termination;'],A,"{""summary"": ""Multiple session terminations processed and expired due to timeouts."", ""anomaly"": ""None""}","INFO Expiring session 0x24ede63a01b0056 , timeout of 10000ms exceeded
+INFO Expiring session 0x24ede63a01b0054 , timeout of 10000ms exceeded
+INFO Expiring session 0x24ede63a01b0055 , timeout of 10000ms exceeded
+INFO Expiring session 0x24ede63a01b0057 , timeout of 10000ms exceeded
+INFO Processed session termination for sessionid : 0x34ede65503f0050
+INFO Processed session termination for sessionid : 0x34ede65503f0053
+INFO Processed session termination for sessionid : 0x34ede65503f004f
+INFO Processed session termination for sessionid : 0x34ede65503f0051
+INFO Processed session termination for sessionid : 0x34ede65503f004e
+INFO Processed session termination for sessionid : 0x34ede65503f0054
+INFO Processed session termination for sessionid : 0x34ede65503f0052
+INFO Processed session termination for sessionid : 0x14ede63a5a70043
+INFO Processed session termination for sessionid : 0x24ede63a01b0056
+INFO Processed session termination for sessionid : 0x24ede63a01b0054
+INFO Processed session termination for sessionid : 0x24ede63a01b0055
+INFO Processed session termination for sessionid : 0x24ede63a01b0057
+INFO Expiring session 0x24ede63a01b0060 , timeout of 10000ms exceeded
+INFO Processed session termination for sessionid : 0x24ede63a01b0060
+INFO Expiring session 0x24ede63a01b005e , timeout of 10000ms exceeded
+INFO Processed session termination for sessionid : 0x24ede63a01b005e"
+['caught exception; Expiring session; timeout exceeded; Processed session termination;'],A,"{""summary"": ""Multiple session terminations, stream exceptions and expired sessions."", ""anomaly"": ""Frequent end of stream exceptions.""}","WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.33 : 56560 which had sessionid 0x14ede63a5a70059
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.36 : 32888 which had sessionid 0x14ede63a5a7005a
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.39 : 42884 which had sessionid 0x14ede63a5a7005b
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 40490 which had sessionid 0x14ede63a5a7004c
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 40489 which had sessionid 0x14ede63a5a7004b
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.12 : 43240 which had sessionid 0x14ede63a5a7004d
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.12 : 43241 which had sessionid 0x14ede63a5a7004e
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.13 : 38095 which had sessionid 0x14ede63a5a7004f
+INFO Expiring session 0x14ede63a5a70053 , timeout of 10000ms exceeded
+INFO Expiring session 0x14ede63a5a70050 , timeout of 10000ms exceeded
+INFO Expiring session 0x14ede63a5a70051 , timeout of 10000ms exceeded
+INFO Expiring session 0x34ede65503f005c , timeout of 10000ms exceeded"
+['Cannot open channel; Notification time out; Received connection request;'],A,"{""summary"": ""Repeated failed attempts to open channels for election addresses, causing notification timeouts."", ""anomaly"": ""Channel opening failures and timeouts""}","WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+INFO Notification time out : 12800
+WARN Cannot open channel to 2 at election address /10.10.34.12 : 3888
+WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+INFO Notification : 1 ( n.leader ) , 0x300000dcd ( n.zxid ) , 0x4 ( n.round ) , LOOKING ( n.state ) , 1 ( n.sid ) , 0x3 ( n.peerEPoch ) , LOOKING ( my state )
+WARN Cannot open channel to 2 at election address /10.10.34.12 : 3888
+WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+INFO Notification : 1 ( n.leader ) , 0x300000dcd ( n.zxid ) , 0x4 ( n.round ) , LOOKING ( n.state ) , 1 ( n.sid ) , 0x3 ( n.peerEPoch ) , LOOKING ( my state )
+WARN Cannot open channel to 2 at election address /10.10.34.12 : 3888
+WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+WARN Cannot open channel to 2 at election address /10.10.34.12 : 3888
+WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+INFO Notification time out : 25600
+WARN Cannot open channel to 2 at election address /10.10.34.12 : 3888
+WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+INFO Notification time out : 51200
+WARN Cannot open channel to 2 at election address /10.10.34.12 : 3888
+WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+INFO Notification time out : 60000
+INFO Received connection request /10.10.34.13 : 51884"
+['Received connection request; Server environment;'],A,"{""summary"": ""Connection requests received and processed, notifications sent, server environment details logged."", ""anomaly"": ""None""}","INFO Received connection request /10.10.34.13 : 47683
+INFO Notification : 2 ( n.leader ) , 0x300000dcd ( n.zxid ) , 0x5 ( n.round ) , LOOKING ( n.state ) , 2 ( n.sid ) , 0x4 ( n.peerEPoch ) , LOOKING ( my state )
+INFO Notification : 3 ( n.leader ) , 0x300000dcd ( n.zxid ) , 0x5 ( n.round ) , LOOKING ( n.state ) , 3 ( n.sid ) , 0x4 ( n.peerEPoch ) , LOOKING ( my state )
+INFO Notification : 1 ( n.leader ) , 0x50000062e ( n.zxid ) , 0x5 ( n.round ) , LOOKING ( n.state ) , 1 ( n.sid ) , 0x5 ( n.peerEPoch ) , LOOKING ( my state )
+INFO Notification : 2 ( n.leader ) , 0x300000dcd ( n.zxid ) , 0x5 ( n.round ) , LEADING ( n.state ) , 2 ( n.sid ) , 0x4 ( n.peerEPoch ) , LOOKING ( my state )
+INFO Notification : 2 ( n.leader ) , 0x300000dcd ( n.zxid ) , 0x5 ( n.round ) , FOLLOWING ( n.state ) , 3 ( n.sid ) , 0x4 ( n.peerEPoch ) , LOOKING ( my state )
+INFO Notification : 2 ( n.leader ) , 0x300000dcd ( n.zxid ) , 0x5 ( n.round ) , FOLLOWING ( n.state ) , 3 ( n.sid ) , 0x4 ( n.peerEPoch ) , LOOKING ( my state )
+INFO Notification : 2 ( n.leader ) , 0x300000dcd ( n.zxid ) , 0x5 ( n.round ) , LEADING ( n.state ) , 2 ( n.sid ) , 0x4 ( n.peerEPoch ) , FOLLOWING ( my state )
+2015-07-31 15 : 15 : 16 , 574 - INFO [ QuorumPeer [ myid = 1 ] /0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 2181 : QuorumPeer@738 ] - FOLLOWING
+INFO TCP NoDelay set to : true
+INFO Server environment : zookeeper.version = 3.4.5--1 , built on 06/10/2013 17 : 26 GMT
+INFO Server environment : host.name = mesos-master-1
+INFO Server environment : java.version = 1.7.0_79
+INFO Server environment : java.vendor = Oracle Corporation
+INFO Server environment : java.home = /usr/lib/jvm/java-7-openjdk-amd64/jre
+INFO Server environment : java.class.path = /etc/zookeeper/conf : /usr/share/java/jline.jar : /usr/share/java/log4j-1.2.jar : /usr/share/java/xercesImpl.jar : /usr/share/java/xmlParserAPIs.jar : /usr/share/java/netty.jar : /usr/share/java/slf4j-api.jar : /usr/share/java/slf4j-log4j12.jar : /usr/share/java/zookeeper.jar
+INFO Server environment : java.library.path = /usr/java/packages/lib/amd64 : /usr/lib/x86_64-linux-gnu/jni : /lib/x86_64-linux-gnu : /usr/lib/x86_64-linux-gnu : /usr/lib/jni : /lib : /usr/lib
+INFO Server environment : java.io.tmpdir = /tmp
+INFO Server environment : java.compiler = <NA>
+INFO Server environment : os.name = Linux"
+['Received connection request; Server environment; Established session timeout;'],A,"{""summary"": ""Multiple sessions established with various clients, warnings for old client connections."", ""anomaly"": ""Old client connection warnings.""}","WARN Connection request from old client /10.10.34.13 : 39514 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.13 : 39514
+INFO Established session 0x14ee3e057ed0002 with negotiated timeout 10000 for client /10.10.34.13 : 39514
+INFO Accepted socket connection from /10.10.34.11 : 39987
+WARN Connection request from old client /10.10.34.11 : 39987 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.11 : 39987
+INFO Established session 0x14ee3e057ed0003 with negotiated timeout 10000 for client /10.10.34.11 : 39987
+INFO Accepted socket connection from /10.10.34.13 : 39517
+WARN Connection request from old client /10.10.34.13 : 39517 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.13 : 39517
+INFO Established session 0x14ee3e057ed0004 with negotiated timeout 10000 for client /10.10.34.13 : 39517
+INFO Accepted socket connection from /10.10.34.15 : 40238
+WARN Connection request from old client /10.10.34.15 : 40238 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.15 : 40238
+INFO Established session 0x14ee3e057ed0005 with negotiated timeout 10000 for client /10.10.34.15 : 40238
+INFO Accepted socket connection from /10.10.34.18 : 40973
+WARN Connection request from old client /10.10.34.18 : 40973 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.18 : 40973
+INFO Established session 0x14ee3e057ed0006 with negotiated timeout 10000 for client /10.10.34.18 : 40973
+INFO Accepted socket connection from /10.10.34.21 : 58065"
+['binding to port; Reading snapshot; Have smaller server identifier; dropping the connection; Received connection request;'],A,"{""summary"": ""Server initialized, processed elections and connection requests, now following leader 3"", ""anomaly"": ""None""}","INFO binding to port 0.0.0.0/0.0.0.0 : 2181
+INFO tickTime set to 2000
+INFO minSessionTimeout set to -1
+INFO maxSessionTimeout set to -1
+INFO initLimit set to 10
+INFO Reading snapshot /var/lib/zookeeper/version-2/snapshot.700000000
+INFO My election bind port : 0.0.0.0/0.0.0.0 : 3888
+2015-08-07 07 : 27 : 47 , 409 - INFO [ QuorumPeer [ myid = 1 ] /0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 2181 : QuorumPeer@670 ] - LOOKING
+INFO New election. My id = 1 , proposed zxid = 0x700000197
+INFO Notification : 1 ( n.leader ) , 0x700000197 ( n.zxid ) , 0x1 ( n.round ) , LOOKING ( n.state ) , 1 ( n.sid ) , 0x7 ( n.peerEPoch ) , LOOKING ( my state )
+INFO Have smaller server identifier , so dropping the connection : ( 2 , 1 )
+INFO Received connection request /10.10.34.12 : 32910
+INFO Have smaller server identifier , so dropping the connection : ( 3 , 1 )
+INFO Received connection request /10.10.34.13 : 38671
+INFO Notification : 3 ( n.leader ) , 0x700000197 ( n.zxid ) , 0x1 ( n.round ) , LOOKING ( n.state ) , 2 ( n.sid ) , 0x7 ( n.peerEPoch ) , LOOKING ( my state )
+INFO Notification : 3 ( n.leader ) , 0x700000197 ( n.zxid ) , 0x1 ( n.round ) , LOOKING ( n.state ) , 1 ( n.sid ) , 0x7 ( n.peerEPoch ) , LOOKING ( my state )
+INFO Notification : 3 ( n.leader ) , 0x700000197 ( n.zxid ) , 0x1 ( n.round ) , FOLLOWING ( n.state ) , 2 ( n.sid ) , 0x7 ( n.peerEPoch ) , LOOKING ( my state )
+INFO Notification : 3 ( n.leader ) , 0x700000197 ( n.zxid ) , 0x1 ( n.round ) , LOOKING ( n.state ) , 3 ( n.sid ) , 0x7 ( n.peerEPoch ) , LOOKING ( my state )
+INFO Notification : 3 ( n.leader ) , 0x700000197 ( n.zxid ) , 0x1 ( n.round ) , LEADING ( n.state ) , 3 ( n.sid ) , 0x7 ( n.peerEPoch ) , LOOKING ( my state )
+INFO Notification : 3 ( n.leader ) , 0x700000197 ( n.zxid ) , 0x1 ( n.round ) , FOLLOWING ( n.state ) , 2 ( n.sid ) , 0x7 ( n.peerEPoch ) , LOOKING ( my state )"
+['caught exception; Closed socket connection; Accepted socket connection; Connection request will be dropped;'],A,"{""summary"": ""Multiple session terminations, new sessions established, some with exceptions."", ""anomaly"": ""End of stream exceptions and old client warnings.""}","WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.20 : 56346 which had sessionid 0x14f05578bd8000e
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.22 : 46856 which had sessionid 0x14f05578bd8000f
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.23 : 57953 which had sessionid 0x14f05578bd80010
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.25 : 46570 which had sessionid 0x14f05578bd80011
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.12 : 46271 which had sessionid 0x14f05578bd80008
+INFO Accepted socket connection from /10.10.34.11 : 38320
+WARN Connection request from old client /10.10.34.11 : 38320 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.11 : 38320
+INFO Established session 0x14f05578bd80013 with negotiated timeout 10000 for client /10.10.34.11 : 38320
+INFO Accepted socket connection from /10.10.34.12 : 46282
+WARN Connection request from old client /10.10.34.12 : 46282 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.12 : 46282
+INFO Accepted socket connection from /10.10.34.12 : 46284
+WARN Connection request from old client /10.10.34.12 : 46284 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.12 : 46284"
+['Revalidating client; Accepted socket connection; Established session timeout;'],A,"{""summary"": ""Multiple session establishments and renewals, with some old client warnings."", ""anomaly"": ""Old client connection requests.""}","INFO Revalidating client : 0x14f05578bd8001b
+INFO Accepted socket connection from /10.10.34.18 : 60219
+INFO Established session 0x14f05578bd80018 with negotiated timeout 10000 for client /10.10.34.13 : 38491
+INFO Accepted socket connection from /10.10.34.16 : 40425
+INFO Established session 0x14f05578bd80015 with negotiated timeout 10000 for client /10.10.34.12 : 46306
+WARN Connection request from old client /10.10.34.18 : 60219 ; will be dropped if server is in r-o mode
+INFO Client attempting to renew session 0x14f05578bd8001a at /10.10.34.18 : 60219
+INFO Revalidating client : 0x14f05578bd8001a
+INFO Accepted socket connection from /10.10.34.22 : 46863
+INFO Established session 0x14f05578bd8001c with negotiated timeout 10000 for client /10.10.34.21 : 58107
+WARN Connection request from old client /10.10.34.16 : 40425 ; will be dropped if server is in r-o mode
+INFO Client attempting to renew session 0x14f05578bd80019 at /10.10.34.16 : 40425
+INFO Revalidating client : 0x14f05578bd80019
+INFO Established session 0x14f05578bd8001b with negotiated timeout 10000 for client /10.10.34.20 : 56374
+WARN Connection request from old client /10.10.34.22 : 46863 ; will be dropped if server is in r-o mode
+INFO Client attempting to renew session 0x14f05578bd8001d at /10.10.34.22 : 46863
+INFO Revalidating client : 0x14f05578bd8001d
+INFO Accepted socket connection from /10.10.34.23 : 57961
+INFO Established session 0x14f05578bd8001a with negotiated timeout 10000 for client /10.10.34.18 : 60219
+WARN Connection request from old client /10.10.34.23 : 57961 ; will be dropped if server is in r-o mode"
+['caught exception; Closed socket connection;'],A,"{""summary"": ""Multiple session terminations and socket disconnections occurred"", ""anomaly"": ""Repeated end of stream exceptions caught.""}","WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.13 : 38505 which had sessionid 0x14f05578bd80018
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.16 : 40428 which had sessionid 0x14f05578bd80019
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.18 : 60222 which had sessionid 0x14f05578bd8001a
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.20 : 56377 which had sessionid 0x14f05578bd8001b
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.21 : 58110 which had sessionid 0x14f05578bd8001c
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.22 : 46866 which had sessionid 0x14f05578bd8001d
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.23 : 57964 which had sessionid 0x14f05578bd8001e
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 38590 which had sessionid 0x14f05578bd80013
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.12 : 46326 which had sessionid 0x14f05578bd80015
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.12 : 46325 which had sessionid 0x14f05578bd80014"
