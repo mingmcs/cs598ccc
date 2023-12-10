@@ -1,0 +1,47 @@
+ref,gpt3,gpt4,log
+['Processed session termination; Processed session termination; Connection request will be dropped;'],"{
+  ""summary"": ""Processed session termination for multiple session IDs and expiring sessions due to timeout."",
+  ""anomaly"": ""Caught end of stream exception.""
+}","{""summary"": ""Multiple Zookeeper session terminations processed, some sessions expired due to timeout, new session attempted."", ""anomaly"": ""End of stream exception caught, old client connection request.""}","INFO Processed session termination for sessionid : 0x34ede65503f002f
+INFO Processed session termination for sessionid : 0x34ede65503f0032
+INFO Processed session termination for sessionid : 0x24ede63a01b003d
+INFO Processed session termination for sessionid : 0x24ede63a01b003c
+INFO Processed session termination for sessionid : 0x24ede63a01b003b
+INFO Processed session termination for sessionid : 0x34ede65503f0031
+INFO Processed session termination for sessionid : 0x34ede65503f0030
+INFO Processed session termination for sessionid : 0x24ede63a01b003e
+INFO Expiring session 0x24ede63a01b0045 , timeout of 10000ms exceeded
+INFO Processed session termination for sessionid : 0x24ede63a01b0045
+INFO Expiring session 0x34ede65503f003c , timeout of 20000ms exceeded
+INFO Processed session termination for sessionid : 0x34ede65503f003c
+INFO Expiring session 0x24ede63a01b0044 , timeout of 20000ms exceeded
+INFO Processed session termination for sessionid : 0x24ede63a01b0044
+INFO Accepted socket connection from /10.10.34.11 : 39791
+WARN Connection request from old client /10.10.34.11 : 39791 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.11 : 39791
+INFO Processed session termination for sessionid : 0x34ede65503f0031
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 39791 which had sessionid 0x14ede63a5a70032"
+['caught exception; Closed socket connection; Expiring session; timeout exceeded;'],"{
+  ""summary"": ""Multiple socket connections were closed and sessions were expired due to timeout."",
+  ""anomaly"": false
+}","{""summary"": ""Multiple sessions expired due to exceeded timeout, and socket connections for clients were closed."", ""anomaly"": ""End of stream exception caught repeatedly.""}","WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.20 : 56423 which had sessionid 0x14ede63a5a7003c
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.22 : 47297 which had sessionid 0x14ede63a5a7003d
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.12 : 43193 which had sessionid 0x14ede63a5a70038
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.13 : 38070 which had sessionid 0x14ede63a5a70039
+INFO Expiring session 0x34ede65503f0049 , timeout of 10000ms exceeded
+INFO Expiring session 0x34ede65503f004c , timeout of 10000ms exceeded
+INFO Expiring session 0x14ede63a5a7003b , timeout of 10000ms exceeded
+INFO Expiring session 0x24ede63a01b004f , timeout of 10000ms exceeded
+INFO Expiring session 0x34ede65503f004b , timeout of 10000ms exceeded
+INFO Expiring session 0x14ede63a5a7003a , timeout of 10000ms exceeded
+INFO Expiring session 0x34ede65503f004a , timeout of 10000ms exceeded
+INFO Expiring session 0x34ede65503f0048 , timeout of 10000ms exceeded
+INFO Expiring session 0x14ede63a5a7003d , timeout of 10000ms exceeded
+INFO Expiring session 0x14ede63a5a7003c , timeout of 10000ms exceeded
+INFO Processed session termination for sessionid : 0x34ede65503f0049
+INFO Processed session termination for sessionid : 0x34ede65503f004c"

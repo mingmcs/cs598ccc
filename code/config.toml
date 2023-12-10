@@ -4,6 +4,11 @@ dataPath="data/summary/logs/Zookeeper.txt"
 logsSourceApplication="Zookeeper"
 engines=["gpt3", "gpt4"]
 outputDir="out"
+outputFilename="zookeeper_without_embeddings"
+
+[data]
+splitRandomState=0
+trainProportion=0.75
 
 [model]
 temperature=0.3
@@ -15,15 +20,15 @@ presencePenalty=0
 [embedding]
 useEmbeddings=false
 model="text-embedding-ada-002"
-deploymentUrl="https://openaics598.openai.azure.com"
-resourceEndpoint="cs598"
+deployment="cs598"
+resourceEndpoint="https://openaics598.openai.azure.com"
 apiKey="5309dd9cfd0e4e9cadd598ee91321fcf"
 openAiApiVersion="2023-05-15"
 chunkSize=16  # current limit with Azure OpenAI service. This will likely increase in the future.
 openAiApiType="azure"
 
 [embedding.redis]
-hostName="redislocal"
+hostName="localhost"
 port="6379"
 indexName="log_data"
 kDocs=5

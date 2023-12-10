@@ -1,0 +1,501 @@
+,ref,gpt3 summary,gpt3 anomaly,gpt4 summary,gpt4 anomaly,log,ref BLEU,ref ROUGE,ref METEOR,ref BERT,ref BLEURT,gpt3 BLEU,gpt3 ROUGE,gpt3 METEOR,gpt3 BERT,gpt3 BLEURT,gpt4 BLEU,gpt4 ROUGE,gpt4 METEOR,gpt4 BERT,gpt4 BLEURT
+0,Unexpected exception causing shutdown; sock still open;,Unexpected exception causing shutdown; sock still open;,"Yes, there were anomalies in the most recent log. There were unexpected exceptions causing a shutdown while the socket was still open.",Unexpected exceptions caused multiple shutdowns with open sockets on /10.10.34.11.,"Yes, there were several unexpected exceptions causing shutdowns while the socket was still open.","WARN ******* GOODBYE /10.10.34.11 : 52253 ********
+ERROR Unexpected exception causing shutdown while sock still open
+WARN ******* GOODBYE /10.10.34.11 : 52255 ********
+ERROR Unexpected exception causing shutdown while sock still open
+WARN ******* GOODBYE /10.10.34.11 : 52256 ********
+ERROR Unexpected exception causing shutdown while sock still open
+WARN ******* GOODBYE /10.10.34.11 : 52257 ********
+ERROR Unexpected exception causing shutdown while sock still open
+WARN ******* GOODBYE /10.10.34.11 : 52261 ********
+ERROR Unexpected exception causing shutdown while sock still open
+WARN ******* GOODBYE /10.10.34.11 : 52263 ********
+ERROR Unexpected exception causing shutdown while sock still open
+WARN ******* GOODBYE /10.10.34.11 : 52264 ********
+ERROR Unexpected exception causing shutdown while sock still open
+WARN ******* GOODBYE /10.10.34.11 : 52265 ********
+ERROR Unexpected exception causing shutdown while sock still open
+WARN ******* GOODBYE /10.10.34.11 : 52269 ********
+ERROR Unexpected exception causing shutdown while sock still open
+WARN ******* GOODBYE /10.10.34.11 : 52271 ********
+ERROR Unexpected exception causing shutdown while sock still open",7.812628184187485e-11,0.08383233532934131,0.026416064707670012,0.3293122947216034,0.7716333866119385,7.812628184187485e-11,0.08383233532934131,0.026416064707670012,0.3293122947216034,0.7716333866119385,8.53339611989486e-09,0.10404624277456648,0.019500614693289245,0.3980024456977844,0.8038280606269836
+1,Send worker; Received connection request; Interrupting SendWorker; Interrupted; Connection broken;,Received connection request; Connection broken; Interrupting SendWorker; Interrupted; Send worker.,"Yes, there were anomalies in the most recent log. The connection was broken multiple times, and there were interruptions while waiting for messages on the queue.",Connection broken; Interrupting SendWorker; Received connection request; Interrupted; Send worker leaving.,"As an AI, I don't analyze data but based on the provided logs, there are repeated warnings of connection breaks, interruptions while waiting for messages, and send workers leaving threads. These could be considered anomalies if they are not common occurrences in your system.","WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+INFO Received connection request /10.10.34.11 : 46518
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.12 : 46929
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.12 : 46933
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+INFO Received connection request /10.10.34.12 : 46936
+WARN Send worker leaving thread",7.273130199568381e-08,0.13333333333333333,0.05523385300668151,0.4752173125743866,0.7957477569580078,7.273130199568381e-08,0.13333333333333333,0.05523385300668151,0.4759272336959839,0.8013800978660583,3.168336185500916e-07,0.1456953642384106,0.07777055693160362,0.4836905300617218,0.8010215163230896
+2,Closed socket connection; Accepted socket connection; Established session timeout; Client attempting to establish new session; caught exception;,Closed socket connection; caught exception; Accepted socket connection; Connection request will be dropped; Established session timeout.,"Yes, there were anomalies in the most recent log. The anomalies include caught end of stream exceptions and closed socket connections.",Closed socket connection; caught exception; Accepted socket connection; Client attempting new session; Established session timeout.,"The log shows multiple instances of ""WARN caught end of stream exception"" which could indicate network issues or client disconnections.","INFO Closed socket connection for client /10.10.34.11 : 50283 which had sessionid 0x14ed93111f2007f
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 50286 which had sessionid 0x14ed93111f20080
+INFO Accepted socket connection from /10.10.34.11 : 50299
+WARN Connection request from old client /10.10.34.11 : 50299 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.11 : 50299
+INFO Established session 0x14ed93111f20081 with negotiated timeout 20000 for client /10.10.34.11 : 50299
+INFO Accepted socket connection from /10.10.34.11 : 50301
+WARN Connection request from old client /10.10.34.11 : 50301 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.11 : 50301
+INFO Established session 0x14ed93111f20082 with negotiated timeout 10000 for client /10.10.34.11 : 50301
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 50299 which had sessionid 0x14ed93111f20081
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 50301 which had sessionid 0x14ed93111f20082
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 50276 which had sessionid 0x14ed93111f2007c
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.12 : 45638 which had sessionid 0x14ed93111f2007d
+WARN caught end of stream exception",2.5270304363353856e-06,0.13026819923371646,0.07731152585645729,0.4067431092262268,0.7884477376937866,3.1083092327531334e-07,0.12307692307692307,0.06509754028838,0.4077533185482025,0.7872241735458374,1.2393781164641823e-07,0.11583011583011583,0.06720449051790359,0.4098184108734131,0.7900431752204895
+3,caught exception; Closed socket connection; Established session timeout; Accepted socket connection; Connection request; Client attempting to establish new session;,caught exception; Closed socket connection; Accepted socket connection; Connection request will be dropped; Established session;,"Yes, there were anomalies in the most recent log. The anomalies include ""caught end of stream exception"" and ""Connection request from old client"".",Caught exception; Closed socket connection; Established session; Connection request will be dropped.,"The log shows several ""end of stream"" exceptions and warnings about old client connection requests being dropped if the server is in read-only mode. These could be considered anomalies depending on the usual behavior of your system.","WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 52909 which had sessionid 0x24ede63a01b0004
+INFO Accepted socket connection from /10.10.34.11 : 53161
+WARN Connection request from old client /10.10.34.11 : 53161 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.11 : 53161
+INFO Established session 0x24ede63a01b0005 with negotiated timeout 10000 for client /10.10.34.11 : 53161
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 53161 which had sessionid 0x24ede63a01b0005
+INFO Accepted socket connection from /10.10.34.11 : 53174
+WARN Connection request from old client /10.10.34.11 : 53174 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.11 : 53174
+INFO Established session 0x24ede63a01b0006 with negotiated timeout 10000 for client /10.10.34.11 : 53174
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 53174 which had sessionid 0x24ede63a01b0006
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 52902 which had sessionid 0x24ede63a01b0001
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 52900 which had sessionid 0x24ede63a01b0000
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 52903 which had sessionid 0x24ede63a01b0002",8.693634128208812e-06,0.14448669201520914,0.07307138193012096,0.4145481288433075,0.7863288521766663,1.2393781164641823e-07,0.11583011583011583,0.06238592238141214,0.3873044550418854,0.7816683650016785,3.5582959096388577e-09,0.09375,0.05841316118284048,0.3760545253753662,0.7888298034667969
+4,Connection request will be dropped; Client attempting to renew session; caught exception; Closed socket connection;,Client attempting to establish new session; Established session timeout; Accepted socket connection; Connection request will be dropped; Caught end of stream exception; Closed socket connection.,"Yes, there were anomalies in the most recent log. There were caught end of stream exceptions and closed socket connections.",Client established new sessions; Connection requests from old clients; Closed socket connections due to stream exceptions.,"The log shows multiple ""end of stream"" exceptions and subsequent closing of socket connections, which could indicate network instability or issues with the clients.","INFO Client attempting to establish new session at /10.10.34.26 : 35425
+INFO Established session 0x24f1724b8af0015 with negotiated timeout 10000 for client /10.10.34.26 : 35425
+INFO Accepted socket connection from /10.10.34.14 : 54248
+WARN Connection request from old client /10.10.34.14 : 54248 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.14 : 54248
+INFO Established session 0x24f1724b8af0016 with negotiated timeout 10000 for client /10.10.34.14 : 54248
+INFO Accepted socket connection from /10.10.34.11 : 51551
+WARN Connection request from old client /10.10.34.11 : 51551 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.11 : 51551
+INFO Established session 0x24f1724b8af0017 with negotiated timeout 20000 for client /10.10.34.11 : 51551
+INFO Accepted socket connection from /10.10.34.11 : 51553
+WARN Connection request from old client /10.10.34.11 : 51553 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.11 : 51553
+INFO Established session 0x24f1724b8af0018 with negotiated timeout 10000 for client /10.10.34.11 : 51553
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 51551 which had sessionid 0x24f1724b8af0017
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 51553 which had sessionid 0x24f1724b8af0018
+INFO Accepted socket connection from /10.10.34.11 : 51562
+WARN Connection request from old client /10.10.34.11 : 51562 ; will be dropped if server is in r-o mode",3.817223124334375e-08,0.0955631399317406,0.05822333485055378,0.3611394464969635,0.7783449292182922,4.567591431613225e-05,0.16501650165016502,0.1180582731222235,0.43307971954345703,0.7878319621086121,4.6293832850535505e-08,0.09523809523809523,0.06377050806935534,0.35426759719848633,0.7858152389526367
+5,Received connection; Connection broken; Interrupted; Interrupting SendWorker;,Interrupted while waiting for message on queue; Received connection request; Send worker; Connection broken; Interrupting SendWorker.,"Yes, there were anomalies in the most recent log. Specifically, there were interruptions while waiting for messages on the queue and connection breaks for the specified ID.",Send worker; Interrupting SendWorker; Received connection request; Connection broken; Interrupted;,"As an AI, I don't analyze data, but the log shows repeated warnings about a SendWorker being interrupted, connection requests, and broken connections.","WARN Interrupted while waiting for message on queue
+INFO Received connection request /10.10.34.12 : 47140
+WARN Send worker leaving thread
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.12 : 47144
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.13 : 44405
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.13 : 44408
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker",7.609364288521248e-11,0.09523809523809523,0.04725941009315118,0.4391946792602539,0.7940540313720703,9.586965450664415e-05,0.20512820512820512,0.11330434682187732,0.5238776206970215,0.813220739364624,7.273130199568381e-08,0.13333333333333333,0.06959910913140312,0.47215598821640015,0.7962458729743958
+6,Received connection request; Server environment; Established session timeout;,Connection request will be dropped; Client attempting to establish new session; Established session timeout; Accepted socket connection.,"Yes, there were anomalies in the most recent log. There were warnings about connection requests from old clients that will be dropped if the server is in read-only mode.",Accepted socket connection; Connection request will be dropped; Client attempting to establish new session; Established session timeout.,"No anomalies were detected in the most recent log. All operations such as connection requests, session establishments, and accepted socket connections proceeded as expected.","WARN Connection request from old client /10.10.34.13 : 39514 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.13 : 39514
+INFO Established session 0x14ee3e057ed0002 with negotiated timeout 10000 for client /10.10.34.13 : 39514
+INFO Accepted socket connection from /10.10.34.11 : 39987
+WARN Connection request from old client /10.10.34.11 : 39987 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.11 : 39987
+INFO Established session 0x14ee3e057ed0003 with negotiated timeout 10000 for client /10.10.34.11 : 39987
+INFO Accepted socket connection from /10.10.34.13 : 39517
+WARN Connection request from old client /10.10.34.13 : 39517 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.13 : 39517
+INFO Established session 0x14ee3e057ed0004 with negotiated timeout 10000 for client /10.10.34.13 : 39517
+INFO Accepted socket connection from /10.10.34.15 : 40238
+WARN Connection request from old client /10.10.34.15 : 40238 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.15 : 40238
+INFO Established session 0x14ee3e057ed0005 with negotiated timeout 10000 for client /10.10.34.15 : 40238
+INFO Accepted socket connection from /10.10.34.18 : 40973
+WARN Connection request from old client /10.10.34.18 : 40973 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.18 : 40973
+INFO Established session 0x14ee3e057ed0006 with negotiated timeout 10000 for client /10.10.34.18 : 40973
+INFO Accepted socket connection from /10.10.34.21 : 58065",3.0748697461466033e-15,0.0396039603960396,0.02532309702011928,0.3431660532951355,0.7655491232872009,2.688291451814145e-07,0.10897435897435898,0.08095854922279794,0.3980526924133301,0.7875288128852844,2.688291451814145e-07,0.10897435897435898,0.07702936096718481,0.40363678336143494,0.7922702431678772
+7,Client attempting to establish new session; Established session timeout; Accepted socket connection; Connection request will be dropped;,Connection request from old client; Client attempting to renew session; Revalidating client; Accepted socket connection.,"Yes, there were anomalies in the most recent log. There were warnings about connection requests from old clients that would be dropped if the server is in read-only mode.",Revalidating client; Accepted socket connection; Client attempting to renew session; Established session timeout.,"As an AI, I don't have real-time access to data or the ability to analyze anomalies. However, based on the provided log, there don't appear to be any anomalies. The log shows normal operations such as session establishment, client revalidation, and connection requests.","WARN Connection request from old client /10.10.34.13 : 36167 ; will be dropped if server is in r-o mode
+INFO Client attempting to renew session 0x24f0557806a001d at /10.10.34.13 : 36167
+INFO Revalidating client : 0x24f0557806a001d
+INFO Accepted socket connection from /10.10.34.19 : 40380
+WARN Connection request from old client /10.10.34.19 : 40380 ; will be dropped if server is in r-o mode
+INFO Client attempting to renew session 0x24f0557806a0021 at /10.10.34.19 : 40380
+INFO Revalidating client : 0x24f0557806a0021
+INFO Accepted socket connection from /10.10.34.15 : 49471
+WARN Connection request from old client /10.10.34.15 : 49471 ; will be dropped if server is in r-o mode
+INFO Client attempting to renew session 0x24f0557806a001f at /10.10.34.15 : 49471
+INFO Revalidating client : 0x24f0557806a001f
+INFO Accepted socket connection from /10.10.34.11 : 51195
+INFO Accepted socket connection from /10.10.34.11 : 51194
+WARN Connection request from old client /10.10.34.11 : 51195 ; will be dropped if server is in r-o mode
+INFO Client attempting to renew session 0x24f0557806a0018 at /10.10.34.11 : 51195
+INFO Revalidating client : 0x24f0557806a0018
+WARN Connection request from old client /10.10.34.11 : 51194 ; will be dropped if server is in r-o mode
+INFO Client attempting to renew session 0x24f0557806a0019 at /10.10.34.11 : 51194
+INFO Established session 0x24f0557806a001a with negotiated timeout 10000 for client /10.10.34.12 : 49435
+INFO Revalidating client : 0x24f0557806a0019",8.765399309147326e-07,0.09923664122137404,0.07974544583663848,0.3651287257671356,0.7813530564308167,4.2973555308285295e-07,0.11538461538461538,0.07670501917625479,0.40714624524116516,0.7941389083862305,3.270595718399402e-08,0.10077519379844961,0.06710260703555333,0.37904465198516846,0.7892665863037109
+8,Interrupted; Received connection request; Accepted socket connection; Connection request will be dropped;,Interrupted while waiting for message; Connection request from old client; Established session;,"Yes, there were anomalies in the most recent log. The anomalies include interrupted while waiting for a message on the queue and connection requests from old clients.",Interrupted; Connection request; Notification; Synchronizing with Follower; Established session; Connection request from old client.,"As an AI, I can't interpret anomalies. However, the log shows several warnings about interruptions and connection requests from old clients, which might be considered unusual.","WARN Interrupted while waiting for message on queue
+WARN ******* GOODBYE /10.10.34.11 : 52221 ********
+WARN Interrupted while waiting for message on queue
+WARN Interrupted while waiting for message on queue
+INFO Received connection request /10.10.34.11 : 38283
+INFO Notification : 1 ( n.leader ) , 0x100001546 ( n.zxid ) , 0x1 ( n.round ) , LOOKING ( n.state ) , 1 ( n.sid ) , 0x1 ( n.peerEPoch ) , LEADING ( my state )
+INFO Notification : 1 ( n.leader ) , 0x100001546 ( n.zxid ) , 0x2 ( n.round ) , LOOKING ( n.state ) , 1 ( n.sid ) , 0x1 ( n.peerEPoch ) , LEADING ( my state )
+INFO Follower sid : 1 : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@19b4ac28
+INFO Synchronizing with Follower sid : 1 maxCommittedLog = 0x100001546 minCommittedLog = 0x100001352 peerLastZxid = 0x100001546
+INFO Sending DIFF
+INFO Accepted socket connection from /10.10.34.12 : 54759
+WARN Connection request from old client /10.10.34.12 : 54759 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.12 : 54759
+INFO Established session 0x24ed931194200da with negotiated timeout 10000 for client /10.10.34.12 : 54759
+INFO Accepted socket connection from /10.10.34.13 : 37611
+WARN Connection request from old client /10.10.34.13 : 37611 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.13 : 37611
+INFO Established session 0x24ed931194200db with negotiated timeout 10000 for client /10.10.34.13 : 37611
+INFO Accepted socket connection from /10.10.34.11 : 52865
+WARN Connection request from old client /10.10.34.11 : 52865 ; will be dropped if server is in r-o mode",4.040716275272751e-11,0.08727272727272728,0.05130368098159509,0.4029959440231323,0.7844875454902649,1.8477544581755252e-10,0.08727272727272728,0.05317308102118229,0.38623344898223877,0.7932294607162476,2.4209053898266093e-09,0.10108303249097472,0.05363851693276175,0.4366437792778015,0.7890247702598572
+9,Received connection; Connection broken; Interrupting SendWorker; Send worker; Interrupted;,Send worker leaving thread; Received connection request; Connection broken; Interrupting SendWorker; Interrupted.,"Yes, there were anomalies in the most recent log. The anomalies include connection breaks, interruptions while waiting for messages, and send worker leaving threads.",Received connection requests; Connection broken; Send worker leaving thread; Interrupting SendWorker; Interrupted while waiting.,"The log shows repeated warnings of a broken connection, interrupted send worker, and send worker leaving thread. These could be considered anomalies.","WARN Send worker leaving thread
+INFO Received connection request /10.10.34.12 : 47197
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.12 : 47200
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.12 : 47204
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.13 : 44465
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue",7.137824938100649e-09,0.12080536912751677,0.06113220699649625,0.46390485763549805,0.7893329858779907,1.732503437012335e-06,0.15789473684210528,0.08573737748126184,0.49706894159317017,0.8019583821296692,9.827835737614009e-06,0.18181818181818182,0.10126663544766538,0.4948202967643738,0.8006466031074524
+10,Processed session; Closed socket connection; caught exception; Expiring session; timeout exceeded;,caught exception; Closed socket connection; Expiring session; timeout exceeded; Processed session termination;,"Yes, there were anomalies in the most recent log. The anomalies include ""caught end of stream exception"" and ""Closed socket connection"" messages.",Caught exceptions; Closed socket connections; Expiring sessions due to timeout; Processed session terminations.,"As an AI, I don't have the ability to analyze data in real-time. However, based on the provided log, there are recurring end of stream exceptions and multiple session terminations due to timeouts, which could indicate network issues or problems with client connections.","WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 58181 which had sessionid 0x24ed931194200ce
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 58228 which had sessionid 0x24ed931194200d0
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 58229 which had sessionid 0x24ed931194200d1
+INFO Expiring session 0x24ed931194200d1 , timeout of 10000ms exceeded
+INFO Expiring session 0x24ed931194200ce , timeout of 10000ms exceeded
+INFO Processed session termination for sessionid : 0x24ed931194200d1
+INFO Processed session termination for sessionid : 0x24ed931194200ce
+INFO Expiring session 0x34ed9ac1c1e00c7 , timeout of 20000ms exceeded
+INFO Expiring session 0x24ed931194200d0 , timeout of 20000ms exceeded
+INFO Processed session termination for sessionid : 0x34ed9ac1c1e00c7
+INFO Processed session termination for sessionid : 0x24ed931194200d0
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 58170 which had sessionid 0x24ed931194200c9
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 58173 which had sessionid 0x24ed931194200ca
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.13 : 37598 which had sessionid 0x24ed931194200cb",1.2111808519592988e-08,0.09137055837563451,0.04829264392856785,0.4033195376396179,0.7698701620101929,5.466637531291322e-08,0.12121212121212122,0.061765693185632756,0.4084305167198181,0.7763875126838684,1.4956304994275558e-07,0.11055276381909547,0.05790117600059924,0.36827942728996277,0.7808302640914917
+11,Send worker; Received connection; Connection broken; Received connection; Interrupting SendWorker; Interrupted;,Received connection request; Connection broken; Interrupting SendWorker; Interrupted; Send worker.,"Yes, there were anomalies in the most recent log. The connection was broken multiple times and there were interruptions while waiting for messages on the queue.",Received connection requests; Connection broken; Send worker; Interrupting SendWorker; Interrupted;,"The log shows repeated instances of connection breaks, interruptions while waiting for messages on queue, and send workers leaving threads. These could be considered anomalies.","INFO Received connection request /10.10.34.11 : 46689
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.11 : 46693
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+INFO Received connection request /10.10.34.11 : 46696
+WARN Send worker leaving thread
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.11 : 46699
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread",1.2595662118114278e-07,0.1456953642384106,0.0592112921110832,0.4581661522388458,0.78622967004776,7.273130199568381e-08,0.13333333333333333,0.06959910913140312,0.47707194089889526,0.8017500638961792,7.273130199568381e-08,0.13333333333333333,0.06959910913140312,0.4644830524921417,0.7916353940963745
+12,Expiring session; timeout exceeded; Processed session termination; Unexpected exception causing shutdown; Shutting down; Shutdown called; Socket closed;,Closed socket connection; Accepted socket connection; Exception causing close of session due to ZooKeeperServer not running.,"Yes, there were anomalies in the most recent log. The anomalies include closed socket connections for clients without established sessions and exceptions causing the close of sessions due to ZooKeeperServer not running.",Accepted socket connection; Exception causing session close; ZooKeeperServer not running; Closed socket connection.,"Yes, there were anomalies. The ZooKeeper server was not running, causing multiple exceptions and forced session closures.","INFO Closed socket connection for client /10.10.34.12 : 36432 ( no session established for client )
+INFO Accepted socket connection from /10.10.34.12 : 36433
+WARN Exception causing close of session 0x0 due to java.io.IOException : ZooKeeperServer not running
+INFO Closed socket connection for client /10.10.34.12 : 36433 ( no session established for client )
+INFO Accepted socket connection from /10.10.34.12 : 36439
+WARN Exception causing close of session 0x0 due to java.io.IOException : ZooKeeperServer not running
+INFO Closed socket connection for client /10.10.34.12 : 36439 ( no session established for client )
+INFO Accepted socket connection from /10.10.34.12 : 36445
+WARN Exception causing close of session 0x0 due to java.io.IOException : ZooKeeperServer not running
+INFO Closed socket connection for client /10.10.34.12 : 36445 ( no session established for client )
+INFO Accepted socket connection from /10.10.34.12 : 36446
+INFO Accepted socket connection from /10.10.34.12 : 36447
+WARN Exception causing close of session 0x0 due to java.io.IOException : ZooKeeperServer not running
+INFO Closed socket connection for client /10.10.34.12 : 36446 ( no session established for client )
+INFO Accepted socket connection from /10.10.34.12 : 36449
+WARN Exception causing close of session 0x0 due to java.io.IOException : ZooKeeperServer not running
+INFO Closed socket connection for client /10.10.34.12 : 36447 ( no session established for client )
+WARN Exception causing close of session 0x0 due to java.io.IOException : ZooKeeperServer not running
+INFO Closed socket connection for client /10.10.34.12 : 36449 ( no session established for client )
+INFO Accepted socket connection from /10.10.34.12 : 36455",1.7620363662507854e-08,0.041522491349480974,0.020924600206574776,0.3563559055328369,0.7606143951416016,1.3579440669101813e-07,0.1111111111111111,0.06811598163533011,0.4430857300758362,0.8046419024467468,9.449116191431122e-10,0.09122807017543859,0.05026348840521537,0.45503345131874084,0.8035095930099487
+13,caught exception; Expiring session; timeout exceeded; Processed session termination;,caught exception; Closed socket connection; Expiring session; timeout exceeded;,"Yes, there were anomalies in the most recent log. The anomalies include the ""caught end of stream exception"" warnings and the expiring sessions with timeout exceeded.",caught exception; Closed socket connection; Expiring session; timeout exceeded;,"As an AI, I can't form opinions, but based on the log, there are several ""end of stream"" exceptions and closed socket connections. Additionally, multiple sessions expired due to exceeding the timeout. These could be considered anomalies depending on the normal operation of the system.","WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.33 : 56560 which had sessionid 0x14ede63a5a70059
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.36 : 32888 which had sessionid 0x14ede63a5a7005a
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.39 : 42884 which had sessionid 0x14ede63a5a7005b
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 40490 which had sessionid 0x14ede63a5a7004c
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 40489 which had sessionid 0x14ede63a5a7004b
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.12 : 43240 which had sessionid 0x14ede63a5a7004d
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.12 : 43241 which had sessionid 0x14ede63a5a7004e
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.13 : 38095 which had sessionid 0x14ede63a5a7004f
+INFO Expiring session 0x14ede63a5a70053 , timeout of 10000ms exceeded
+INFO Expiring session 0x14ede63a5a70050 , timeout of 10000ms exceeded
+INFO Expiring session 0x14ede63a5a70051 , timeout of 10000ms exceeded
+INFO Expiring session 0x34ede65503f005c , timeout of 10000ms exceeded",8.382396406431538e-11,0.06698564593301436,0.020527859237536656,0.3546629846096039,0.7677030563354492,1.830804975185987e-10,0.0861244019138756,0.044965786901270774,0.3672425448894501,0.7696216702461243,1.830804975185987e-10,0.0861244019138756,0.044965786901270774,0.3672425448894501,0.7696216702461243
+14,Expiring session; Processed session termination; Established session timeout; Accepted socket connection; Connection request will be dropped; timeout exceeded;,Expiring session; timeout exceeded; Processed session termination; Accepted socket connection; Connection request from old client.,"Yes, there were anomalies in the most recent log. The log shows warnings about connection requests from old clients, which will be dropped if the server is in read-only mode.",Session expiration due to timeout; Processed session termination; Accepted socket connections; Established new sessions.,"As an AI, I can't form opinions, but based on the log, there were no explicit anomalies. However, there were warnings about connection requests from old clients that would be dropped if the server was in read-only mode.","INFO Expiring session 0x34ede65503f0009 , timeout of 10000ms exceeded
+INFO Expiring session 0x14ede63a5a7000e , timeout of 10000ms exceeded
+INFO Processed session termination for sessionid : 0x24ede63a01b000c
+INFO Processed session termination for sessionid : 0x34ede65503f0008
+INFO Processed session termination for sessionid : 0x34ede65503f000a
+INFO Processed session termination for sessionid : 0x34ede65503f0009
+INFO Processed session termination for sessionid : 0x14ede63a5a7000e
+INFO Accepted socket connection from /10.10.34.12 : 43135
+WARN Connection request from old client /10.10.34.12 : 43135 ; will be dropped if server is in r-o mode
+INFO Accepted socket connection from /10.10.34.12 : 43135
+INFO Established session 0x14ede63a5a70015 with negotiated timeout 10000 for client /10.10.34.12 : 43135
+INFO Accepted socket connection from /10.10.34.13 : 38022
+WARN Connection request from old client /10.10.34.13 : 38022 ; will be dropped if server is in r-o mode
+INFO Accepted socket connection from /10.10.34.12 : 43135
+INFO Established session 0x14ede63a5a70016 with negotiated timeout 10000 for client /10.10.34.13 : 38022
+INFO Expiring session 0x14ede63a5a70014 , timeout of 10000ms exceeded
+INFO Expiring session 0x14ede63a5a70010 , timeout of 10000ms exceeded
+INFO Expiring session 0x14ede63a5a70012 , timeout of 10000ms exceeded
+INFO Expiring session 0x24ede63a01b0018 , timeout of 10000ms exceeded
+INFO Expiring session 0x34ede65503f0010 , timeout of 10000ms exceeded",3.282477129949149e-06,0.16289592760180993,0.07635674931129477,0.42996832728385925,0.7776313424110413,1.106161100856126e-06,0.13761467889908258,0.054740446215839754,0.4253726899623871,0.7841914296150208,1.125678096487014e-07,0.10138248847926268,0.050094694181950214,0.3657030761241913,0.7757536172866821
+15,Unexpected exception causing shutdown; sock still open;,Unexpected exception causing shutdown; sock still open;,"Yes, there were anomalies in the most recent log. There were unexpected exceptions causing shutdown while the socket was still open.",Unexpected exceptions caused multiple shutdowns; sock still open;,"Yes, there were several unexpected exceptions causing shutdowns while the socket was still open.","WARN ******* GOODBYE /10.10.34.11 : 52819 ********
+ERROR Unexpected exception causing shutdown while sock still open
+ERROR Unexpected exception causing shutdown while sock still open
+ERROR Unexpected exception causing shutdown while sock still open
+WARN ******* GOODBYE /10.10.34.12 : 59506 ********
+ERROR Unexpected exception causing shutdown while sock still open
+WARN ******* GOODBYE /10.10.34.12 : 59505 ********
+WARN ******* GOODBYE /10.10.34.12 : 59508 ********
+WARN ******* GOODBYE /10.10.34.12 : 59504 ********
+ERROR Unexpected exception causing shutdown while sock still open
+ERROR Unexpected exception causing shutdown while sock still open
+ERROR Unexpected exception causing shutdown while sock still open
+WARN ******* GOODBYE /10.10.34.13 : 57628 ********
+WARN ******* GOODBYE /10.10.34.13 : 57626 ********
+ERROR Unexpected exception causing shutdown while sock still open
+WARN ******* GOODBYE /10.10.34.13 : 57627 ********
+WARN ******* GOODBYE /10.10.34.13 : 57629 ********
+ERROR Unexpected exception causing shutdown while sock still open
+WARN ******* GOODBYE /10.10.34.11 : 52827 ********
+ERROR Unexpected exception causing shutdown while sock still open",7.812628184187485e-11,0.08383233532934131,0.026416064707670012,0.32833969593048096,0.7724417448043823,7.812628184187485e-11,0.08383233532934131,0.026416064707670012,0.32833969593048096,0.7724417448043823,4.416453844332985e-10,0.08333333333333333,0.025665991587474683,0.3025660812854767,0.784310519695282
+16,Notification time out; Cannot open channel;,Cannot open channel; Notification time out.,"Yes, there were anomalies in the most recent log. The warning message ""Cannot open channel"" appears multiple times.",Repeated warnings of failed channel opening and notification timeouts at specific election addresses.,"The log repeatedly shows warnings of failed attempts to open channels to 2 and 3 at specific election addresses, which could indicate a network issue or a problem with those specific nodes. This is an anomaly that needs to be addressed.","INFO Notification time out : 60000
+WARN Cannot open channel to 2 at election address /10.10.34.12 : 3888
+WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+INFO Notification time out : 60000
+WARN Cannot open channel to 2 at election address /10.10.34.12 : 3888
+WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+INFO Notification time out : 60000
+WARN Cannot open channel to 2 at election address /10.10.34.12 : 3888
+WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+INFO Notification time out : 60000
+WARN Cannot open channel to 2 at election address /10.10.34.12 : 3888
+WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+INFO Notification time out : 60000
+WARN Cannot open channel to 2 at election address /10.10.34.12 : 3888
+WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+INFO Notification time out : 60000
+WARN Cannot open channel to 2 at election address /10.10.34.12 : 3888
+WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+INFO Notification time out : 60000
+WARN Cannot open channel to 2 at election address /10.10.34.12 : 3888",1.7404269752917785e-15,0.05381165919282511,0.03625978693364138,0.3360144793987274,0.7751681804656982,1.7404269752917785e-15,0.05381165919282511,0.03625978693364138,0.3455358147621155,0.7843440175056458,1.6268332569055055e-08,0.0608695652173913,0.025070143059837634,0.32056179642677307,0.7845712900161743
+17,Notification time out; Cannot open channel;,Cannot open channel; Notification time out.,"Yes, there were anomalies in the most recent log. The warning ""Cannot open channel"" indicates a problem with opening a channel to the specified election address.",Repeated warnings of failed channel openings and notification timeouts at specific election addresses.,"As an AI, I can't make judgments, but the log shows repeated warnings about the inability to open channels to 2 and 3 at specific election addresses, along with notification timeouts. This could indicate a network or configuration issue.","WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+INFO Notification time out : 60000
+WARN Cannot open channel to 2 at election address /10.10.34.12 : 3888
+WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+INFO Notification time out : 60000
+WARN Cannot open channel to 2 at election address /10.10.34.12 : 3888
+WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+INFO Notification time out : 60000
+WARN Cannot open channel to 2 at election address /10.10.34.12 : 3888
+WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+INFO Notification time out : 60000
+WARN Cannot open channel to 2 at election address /10.10.34.12 : 3888
+WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+INFO Notification time out : 60000
+WARN Cannot open channel to 2 at election address /10.10.34.12 : 3888
+WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+INFO Notification time out : 60000
+WARN Cannot open channel to 2 at election address /10.10.34.12 : 3888
+WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+INFO Notification time out : 60000",1.7404269752917785e-15,0.05381165919282511,0.03625978693364138,0.34079816937446594,0.7790554165840149,1.7404269752917785e-15,0.05381165919282511,0.03625978693364138,0.3512701988220215,0.7866353392601013,1.6268332569055055e-08,0.0608695652173913,0.025070143059837634,0.31833669543266296,0.7879684567451477
+18,Received connection request; Connection broken; Send worker; Interrupted;,Interrupted while waiting for message on queue; Send worker leaving thread; Received connection request; Connection broken.,"Yes, there were anomalies in the most recent log. The anomalies include ""Interrupted while waiting for message on queue"" and ""Connection broken for id 188978561024, my id = 2, error ="".",Received connection requests; Connection broken; Send worker; Interrupted; Interrupting SendWorker.,"The log shows repeated warnings about a send worker leaving the thread, interruptions while waiting for messages on the queue, and broken connections. These could be considered anomalies.","WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.13 : 42678
+WARN Connection broken for id 188978561024 , my id = 2 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.11 : 58162
+WARN Connection broken for id 188978561024 , my id = 2 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.11 : 58164
+WARN Connection broken for id 188978561024 , my id = 2 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.11 : 58168
+WARN Connection broken for id 188978561024 , my id = 2 , error =
+WARN Connection broken for id 188978561024 , my id = 2 , error =",5.377682904617092e-10,0.10322580645161289,0.04374566874566875,0.4454175531864166,0.7938950061798096,5.597744006037368e-05,0.19631901840490798,0.10337698139214335,0.4974002540111542,0.8077595233917236,2.4210147314075575e-08,0.12738853503184713,0.057295988934993075,0.4578074812889099,0.7956923246383667
+19,Processed session termination; Expiring session; Closed socket connection; Connection request will be dropped; timeout exceeded;,Processed session termination; Expiring session; timeout exceeded; Closed socket connection; Connection request will be dropped.,"Yes, there were anomalies in the most recent log. Specifically, there were caught end of stream exceptions and connection requests from old clients that would be dropped if the server is in read-only mode.",Processed session termination; Expiring session; timeout exceeded; Closed socket connection; Connection request; caught exception.,"The log shows several ""WARN caught end of stream exception"" entries, indicating potential issues with connections. Also, there are warnings about old client connection requests that could be dropped.","INFO Processed session termination for sessionid : 0x34ede65503f0012
+INFO Processed session termination for sessionid : 0x24ede63a01b001b
+INFO Processed session termination for sessionid : 0x14ede63a5a70015
+INFO Processed session termination for sessionid : 0x24ede63a01b001d
+INFO Processed session termination for sessionid : 0x24ede63a01b001f
+INFO Expiring session 0x34ede65503f001d , timeout of 10000ms exceeded
+INFO Processed session termination for sessionid : 0x34ede65503f001d
+INFO Expiring session 0x24ede63a01b002a , timeout of 20000ms exceeded
+INFO Processed session termination for sessionid : 0x24ede63a01b002a
+INFO Expiring session 0x24ede63a01b0029 , timeout of 20000ms exceeded
+INFO Processed session termination for sessionid : 0x24ede63a01b0029
+INFO Expiring session 0x24ede63a01b0028 , timeout of 10000ms exceeded
+INFO Processed session termination for sessionid : 0x24ede63a01b0028
+INFO Processed session termination for sessionid : 0x24ede63a01b002b
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.13 : 38030 which had sessionid 0x14ede63a5a7001a
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.13 : 38028 which had sessionid 0x14ede63a5a70019
+INFO Accepted socket connection from /10.10.34.11 : 39308
+WARN Connection request from old client /10.10.34.11 : 39308 ; will be dropped if server is in r-o mode",1.2780787517864887e-06,0.1368421052631579,0.07656155245603395,0.43015292286872864,0.7783987522125244,1.2780787517864887e-06,0.15789473684210528,0.07656155245603395,0.4334128797054291,0.7853033542633057,4.579550272524003e-07,0.12698412698412698,0.061357051411629934,0.43655553460121155,0.7816967368125916
+20,Expiring session; timeout exceeded; Processed session termination;,Processed session termination; Expiring session; timeout exceeded;,"Yes, there were anomalies in the most recent log. There were caught end of stream exceptions and closed socket connections.",Processed session termination; Expiring session; timeout exceeded;,"As an AI, I can't form opinions, but based on the provided log, there don't appear to be any anomalies. The log shows normal operations of session terminations and expirations due to timeouts.","INFO Processed session termination for sessionid : 0x24ed93119420059
+INFO Processed session termination for sessionid : 0x34ed9ac1c1e0034
+INFO Processed session termination for sessionid : 0x34ed9ac1c1e003a
+INFO Processed session termination for sessionid : 0x34ed9ac1c1e0036
+INFO Processed session termination for sessionid : 0x34ed9ac1c1e0037
+INFO Processed session termination for sessionid : 0x14ed93111f2004c
+INFO Processed session termination for sessionid : 0x14ed93111f2004e
+INFO Processed session termination for sessionid : 0x24ed9311942005b
+INFO Expiring session 0x14ed93111f20052 , timeout of 10000ms exceeded
+INFO Processed session termination for sessionid : 0x14ed93111f20052
+INFO Expiring session 0x34ed9ac1c1e001b , timeout of 10000ms exceeded
+INFO Expiring session 0x24ed9311942003e , timeout of 10000ms exceeded
+INFO Expiring session 0x34ed9ac1c1e001a , timeout of 10000ms exceeded
+INFO Expiring session 0x34ed9ac1c1e001c , timeout of 10000ms exceeded
+INFO Expiring session 0x14ed93111f20037 , timeout of 10000ms exceeded
+INFO Expiring session 0x14ed93111f20038 , timeout of 10000ms exceeded
+INFO Expiring session 0x24ed9311942003d , timeout of 10000ms exceeded
+INFO Expiring session 0x24ed9311942003f , timeout of 10000ms exceeded
+INFO Expiring session 0x34ed9ac1c1e001d , timeout of 10000ms exceeded
+INFO Expiring session 0x14ed93111f20039 , timeout of 10000ms exceeded",6.514030364924403e-12,0.08860759493670886,0.02259522272433828,0.412786602973938,0.7588711977005005,6.514030364924403e-12,0.08860759493670886,0.030961383907985397,0.40881896018981934,0.7529111504554749,6.514030364924403e-12,0.08860759493670886,0.030961383907985397,0.40881896018981934,0.7529111504554749
+21,Expiring session; timeout exceeded; Processed session termination; caught exception;,Connection request from old client; Client attempting to establish new session; Established session timeout; Accepted socket connection.,"Yes, there were anomalies in the most recent log. The anomalies include connection requests from old clients and warnings that the connection will be dropped if the server is in read-only mode.",Accepted socket connection; Client attempting new session; Established session with timeout; Connection request may be dropped.,"No, the log shows normal operations such as accepting socket connections, establishing new sessions, and warning about potential drops in read-only mode.","WARN Connection request from old client /10.10.34.21 : 42524 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.21 : 42524
+INFO Established session 0x24edfaa87170026 with negotiated timeout 10000 for client /10.10.34.21 : 42524
+INFO Accepted socket connection from /10.10.34.28 : 53817
+WARN Connection request from old client /10.10.34.28 : 53817 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.28 : 53817
+INFO Established session 0x24edfaa87170027 with negotiated timeout 10000 for client /10.10.34.28 : 53817
+INFO Accepted socket connection from /10.10.34.25 : 39033
+WARN Connection request from old client /10.10.34.25 : 39033 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.25 : 39033
+INFO Established session 0x24edfaa87170028 with negotiated timeout 10000 for client /10.10.34.25 : 39033
+INFO Accepted socket connection from /10.10.34.29 : 34094
+WARN Connection request from old client /10.10.34.29 : 34094 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.29 : 34094
+INFO Established session 0x24edfaa87170029 with negotiated timeout 10000 for client /10.10.34.29 : 34094
+INFO Accepted socket connection from /10.10.34.31 : 52665
+WARN Connection request from old client /10.10.34.31 : 52665 ; will be dropped if server is in r-o mode
+INFO Client attempting to establish new session at /10.10.34.31 : 52665
+INFO Established session 0x24edfaa8717002a with negotiated timeout 10000 for client /10.10.34.31 : 52665
+INFO Accepted socket connection from /10.10.34.32 : 58922",4.1212556253519324e-14,0.019736842105263157,0.015164644714038127,0.32617464661598206,0.7582234740257263,3.481364399188835e-07,0.10897435897435898,0.07702936096718481,0.41993555426597595,0.793808102607727,2.568643987812235e-08,0.09646302250803859,0.05946190971388955,0.39634665846824646,0.7890632748603821
+22,Closed socket connection; caught stream exception;,Closed socket connection; caught exception;,"Yes, there were anomalies in the most recent log. The log shows that there were caught end of stream exceptions for multiple socket connections.",Caught exception; Closed multiple socket connections for various clients.,"As an AI, I can't make judgments, but the log shows repeated ""end of stream"" exceptions and closed socket connections, which could indicate issues.","INFO Closed socket connection for client /10.10.34.11 : 52893 which had sessionid 0x14ed93111f2009b
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 52894 which had sessionid 0x14ed93111f2009c
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 52895 which had sessionid 0x14ed93111f2009d
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.13 : 37231 which had sessionid 0x14ed93111f2008c
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.15 : 34846 which had sessionid 0x14ed93111f2008d
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.16 : 39310 which had sessionid 0x14ed93111f2008e
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.17 : 51203 which had sessionid 0x14ed93111f2008f
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.19 : 33440 which had sessionid 0x14ed93111f20090
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.20 : 56414 which had sessionid 0x14ed93111f20091
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.22 : 47085 which had sessionid 0x14ed93111f20092
+WARN caught end of stream exception",5.552104302024677e-15,0.05555555555555556,0.032741559953434224,0.34390556812286377,0.7678728103637695,1.1446396523824113e-17,0.046511627906976744,0.025975538730343622,0.3314657211303711,0.7615105509757996,6.246311319464124e-11,0.0639269406392694,0.03326257870957796,0.3243291676044464,0.785743236541748
+23,Processed session termination; Established session timeout; Expiring session; timeout exceeded;  Got user-level KeeperException; Closed socket connection;,initLimit set; Reading snapshot; My election bind port; LOOKING; Cannot open channel; Notification time out.,"Yes, there were anomalies in the most recent log. Specifically, there were warnings indicating that channels could not be opened to certain election addresses.",Reading snapshot; New election; Cannot open channel; Notification time out;,"The log indicates repeated warnings about the inability to open a channel to addresses /10.10.34.11:3888 and /10.10.34.13:3888, which could be considered an anomaly.","INFO initLimit set to 10
+INFO Reading snapshot /var/lib/zookeeper/version-2/snapshot.50000062e
+INFO My election bind port : 0.0.0.0/0.0.0.0 : 3888
+2015-08-07 07 : 27 : 27 , 390 - INFO [ QuorumPeer [ myid = 2 ] /0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 2181 : QuorumPeer@670 ] - LOOKING
+INFO New election. My id = 2 , proposed zxid = 0x700000197
+WARN Cannot open channel to 1 at election address /10.10.34.11 : 3888
+INFO Notification : 2 ( n.leader ) , 0x700000197 ( n.zxid ) , 0x1 ( n.round ) , LOOKING ( n.state ) , 2 ( n.sid ) , 0x7 ( n.peerEPoch ) , LOOKING ( my state )
+WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+WARN Cannot open channel to 1 at election address /10.10.34.11 : 3888
+WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+INFO Notification time out : 400
+WARN Cannot open channel to 1 at election address /10.10.34.11 : 3888
+WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+INFO Notification time out : 800
+WARN Cannot open channel to 1 at election address /10.10.34.11 : 3888
+WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+INFO Notification time out : 1600
+WARN Cannot open channel to 1 at election address /10.10.34.11 : 3888
+WARN Cannot open channel to 3 at election address /10.10.34.13 : 3888
+INFO Notification time out : 3200",0.0,0.0,0.0,0.37555962800979614,0.7589967250823975,1.9297630256303296e-08,0.11583011583011583,0.06563283705279196,0.46461793780326843,0.7937368154525757,3.044675474904533e-12,0.07874015748031496,0.04384555029017217,0.4097531735897064,0.7835284471511841
+24,Processed session termination; Expiring session; timeout exceeded;,Expiring session; timeout exceeded; Processed session termination;,"No, there were no anomalies in the most recent log.",Expiring session; timeout exceeded; Processed session termination;,"As an AI, I don't have real-time access to data or ability to analyze anomalies. However, based on the provided log excerpts, there don't appear to be any anomalies. The logs show standard session expirations and terminations due to timeouts.","INFO Expiring session 0x24ed93119420067 , timeout of 10000ms exceeded
+INFO Expiring session 0x14ed93111f2005b , timeout of 10000ms exceeded
+INFO Expiring session 0x24ed93119420069 , timeout of 10000ms exceeded
+INFO Expiring session 0x34ed9ac1c1e0040 , timeout of 10000ms exceeded
+INFO Expiring session 0x14ed93111f2005d , timeout of 10000ms exceeded
+INFO Expiring session 0x14ed93111f2005c , timeout of 10000ms exceeded
+INFO Processed session termination for sessionid : 0x34ed9ac1c1e0041
+INFO Processed session termination for sessionid : 0x34ed9ac1c1e0045
+INFO Processed session termination for sessionid : 0x24ed93119420065
+INFO Processed session termination for sessionid : 0x34ed9ac1c1e0043
+INFO Processed session termination for sessionid : 0x34ed9ac1c1e0044
+INFO Processed session termination for sessionid : 0x14ed93111f20059
+INFO Processed session termination for sessionid : 0x24ed93119420067
+INFO Processed session termination for sessionid : 0x14ed93111f2005b
+INFO Processed session termination for sessionid : 0x24ed93119420069
+INFO Processed session termination for sessionid : 0x34ed9ac1c1e0040
+INFO Processed session termination for sessionid : 0x14ed93111f2005d
+INFO Processed session termination for sessionid : 0x14ed93111f2005c
+INFO Expiring session 0x14ed93111f2005f , timeout of 10000ms exceeded
+INFO Expiring session 0x34ed9ac1c1e0047 , timeout of 10000ms exceeded",9.999447054360652e-12,0.09032258064516129,0.031510633162594864,0.4034811556339264,0.7544730305671692,9.999447054360652e-12,0.09032258064516129,0.022996057818659658,0.41280314326286316,0.7587888836860657,9.999447054360652e-12,0.09032258064516129,0.022996057818659658,0.41280314326286316,0.7587888836860657

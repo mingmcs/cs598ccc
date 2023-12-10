@@ -1,8 +1,12 @@
+SUMMARY = 'summary'
+LOG = 'log'
+
+
 def get_record_type(key):
     if key.startswith("#summary:#"):
-        return 'summary'
+        return SUMMARY
     else:
-        return 'log'
+        return LOG
 
 
 def load_data(file):
@@ -19,7 +23,7 @@ def load_data(file):
 
             if line.startswith("#"):
                 if current_key is not None:
-                    if get_record_type(current_key) == 'summary':
+                    if get_record_type(current_key) == SUMMARY:
                         data_summary.append(lines)
                     else:
                         data_log[current_key.replace("#", "")] = lines
