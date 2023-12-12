@@ -1,0 +1,221 @@
+ref,gen3,gen4,log
+['Expiring session; timeout exceeded; Processed session termination;'],Session establishment attempts; Expiring sessions due to timeout; Accepted socket connection; Processed session termination.,"{""summary"": ""Multiple session expirations and new session establishments occurred"", ""anomaly"": ""Excessive session timeouts and old client connection requests""}","INFO Client attempting to establish new session at /10.10.34.22 : 37109
+INFO Established session 0x24f4a631df9000f with negotiated timeout 10000 for client /10.10.34.22 : 37109
+INFO Expiring session 0x14f4a6318b80003 , timeout of 10000ms exceeded
+INFO Expiring session 0x34f4a63146b0010 , timeout of 10000ms exceeded
+INFO Expiring session 0x14f4a6318b80002 , timeout of 10000ms exceeded
+INFO Expiring session 0x34f4a63146b0009 , timeout of 10000ms exceeded
+INFO Expiring session 0x34f4a63146b0008 , timeout of 10000ms exceeded
+INFO Accepted socket connection from /10.10.34.27 : 36156
+INFO Expiring session 0x34f4a63146b000f , timeout of 10000ms exceeded
+INFO Expiring session 0x34f4a63146b0004 , timeout of 10000ms exceeded
+INFO Expiring session 0x14f4a6318b80001 , timeout of 10000ms exceeded
+WARN Connection request from old client /10.10.34.27 : 36156 ; will be dropped if server is in r-o mode
+INFO Expiring session 0x34f4a63146b0002 , timeout of 10000ms exceeded
+INFO Client attempting to establish new session at /10.10.34.27 : 36156
+INFO Expiring session 0x34f4a63146b0005 , timeout of 10000ms exceeded
+INFO Expiring session 0x14f4a6318b80004 , timeout of 10000ms exceeded
+INFO Expiring session 0x34f4a63146b0003 , timeout of 10000ms exceeded
+INFO Expiring session 0x24f4a631df90000 , timeout of 10000ms exceeded
+INFO Processed session termination for sessionid : 0x14f4a6318b80003
+INFO Processed session termination for sessionid : 0x34f4a63146b0010"
+['Client attempting to establish new session;  Expiring session; timeout exceeded; Processed session termination;'],Established session timeout; Accepted socket connection; Creating new log file; Connection request will be dropped;,"{""summary"": ""Session terminations processed and sessions expired due to timeout"", ""anomaly"": ""None""}","INFO Processed session termination for sessionid : 0x24f4a631df90014
+INFO Processed session termination for sessionid : 0x24f4a631df9000f
+INFO Expiring session 0x14f4a6318b80017 , timeout of 10000ms exceeded
+INFO Expiring session 0x24f4a631df90015 , timeout of 10000ms exceeded
+INFO Expiring session 0x24f4a631df90016 , timeout of 10000ms exceeded
+INFO Expiring session 0x24f4a631df90017 , timeout of 10000ms exceeded
+INFO Processed session termination for sessionid : 0x14f4a6318b80017
+INFO Processed session termination for sessionid : 0x24f4a631df90015
+INFO Processed session termination for sessionid : 0x24f4a631df90016
+INFO Processed session termination for sessionid : 0x24f4a631df90017
+INFO Expiring session 0x14f4a6318b8000e , timeout of 10000ms exceeded
+INFO Expiring session 0x14f4a6318b8000f , timeout of 10000ms exceeded
+INFO Expiring session 0x24f4a631df9000c , timeout of 10000ms exceeded
+INFO Expiring session 0x14f4a6318b8000d , timeout of 10000ms exceeded
+INFO Expiring session 0x34f4a63146b001a , timeout of 10000ms exceeded
+INFO Expiring session 0x24f4a631df90018 , timeout of 10000ms exceeded
+INFO Expiring session 0x24f4a631df9000a , timeout of 10000ms exceeded
+INFO Expiring session 0x24f4a631df90009 , timeout of 10000ms exceeded
+INFO Expiring session 0x34f4a63146b001b , timeout of 10000ms exceeded
+INFO Expiring session 0x14f4a6318b8000b , timeout of 10000ms exceeded"
+['Processed session termination; Expiring session; timeout exceeded;'],Processed session termination; caught end of stream exception; Closed socket connection; Expiring session; timeout exceeded.,"{""summary"": ""Session terminations processed, sessions expired due to timeout, socket connections closed"", ""anomaly"": ""Caught end of stream exception""}","INFO Processed session termination for sessionid : 0x14f4a6318b8001f
+INFO Processed session termination for sessionid : 0x34f4a63146b0031
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.11 : 34411 which had sessionid 0x24f4a631df90019
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.13 : 53614 which had sessionid 0x24f4a631df9001b
+WARN caught end of stream exception
+INFO Closed socket connection for client /10.10.34.13 : 53612 which had sessionid 0x24f4a631df9001a
+INFO Expiring session 0x34f4a63146b002e , timeout of 10000ms exceeded
+INFO Processed session termination for sessionid : 0x34f4a63146b002e
+INFO Expiring session 0x14f4a6318b8001c , timeout of 10000ms exceeded
+INFO Expiring session 0x24f4a631df90021 , timeout of 10000ms exceeded
+INFO Expiring session 0x14f4a6318b80022 , timeout of 10000ms exceeded
+INFO Expiring session 0x34f4a63146b0032 , timeout of 10000ms exceeded
+INFO Expiring session 0x14f4a6318b8001d , timeout of 10000ms exceeded
+INFO Expiring session 0x24f4a631df9001f , timeout of 10000ms exceeded
+INFO Expiring session 0x34f4a63146b0034 , timeout of 10000ms exceeded
+INFO Expiring session 0x24f4a631df90022 , timeout of 10000ms exceeded
+INFO Expiring session 0x14f4a6318b8001b , timeout of 10000ms exceeded
+INFO Expiring session 0x14f4a6318b8001e , timeout of 10000ms exceeded"
+['Processed session termination; Expiring session; timeout exceeded; Closed socket connection; caught exception;'],Closed socket connection; Accepted socket connection; Exception causing close of session;,"{""summary"": ""Multiple session timeouts exceeded, sessions terminated and configuration read."", ""anomaly"": ""Session timeouts""}","INFO Expiring session 0x14f4a6318b8003d , timeout of 10000ms exceeded
+INFO Processed session termination for sessionid : 0x34f4a63146b0048
+INFO Processed session termination for sessionid : 0x24f4a631df90031
+INFO Processed session termination for sessionid : 0x14f4a6318b8003d
+INFO Closed socket connection for client /10.10.34.35 : 47894 which had sessionid 0x24f4a631df90031
+INFO Expiring session 0x34f4a63146b004a , timeout of 10000ms exceeded
+INFO Expiring session 0x14f4a6318b8003c , timeout of 10000ms exceeded
+INFO Expiring session 0x14f4a6318b80036 , timeout of 10000ms exceeded
+INFO Expiring session 0x14f4a6318b8003e , timeout of 10000ms exceeded
+INFO Expiring session 0x14f4a6318b8003b , timeout of 10000ms exceeded
+INFO Expiring session 0x34f4a63146b0049 , timeout of 10000ms exceeded
+INFO Expiring session 0x14f4a6318b80035 , timeout of 10000ms exceeded
+INFO Processed session termination for sessionid : 0x34f4a63146b004a
+INFO Processed session termination for sessionid : 0x14f4a6318b8003c
+INFO Processed session termination for sessionid : 0x14f4a6318b80036
+INFO Processed session termination for sessionid : 0x14f4a6318b8003e
+INFO Processed session termination for sessionid : 0x14f4a6318b8003b
+INFO Processed session termination for sessionid : 0x34f4a63146b0049
+INFO Processed session termination for sessionid : 0x14f4a6318b80035
+INFO Reading configuration from : /etc/zookeeper/conf/zoo.cfg"
+['Processed session termination; Expiring session; timeout exceeded; Reading configuration; Closed socket connection;'],"Notification: Leader 3, zxid 0xd0000001b, round 0x3, state LEADING; Server environment","{""summary"": ""Server environment set, notifications received, server created with specific parameters."", ""anomaly"": ""None""}","INFO Notification : 3 ( n.leader ) , 0xd0000001b ( n.zxid ) , 0x3 ( n.round ) , LEADING ( n.state ) , 3 ( n.sid ) , 0xe ( n.peerEPoch ) , LOOKING ( my state )
+INFO Notification : 3 ( n.leader ) , 0xd0000001b ( n.zxid ) , 0x3 ( n.round ) , LEADING ( n.state ) , 3 ( n.sid ) , 0xe ( n.peerEPoch ) , LOOKING ( my state )
+2015-08-25 11 : 26 : 28 , 086 - INFO [ QuorumPeer [ myid = 2 ] /0 : 0 : 0 : 0 : 0 : 0 : 0 : 0 : 2181 : QuorumPeer@738 ] - FOLLOWING
+INFO TCP NoDelay set to : true
+INFO Server environment : zookeeper.version = 3.4.5--1 , built on 06/10/2013 17 : 26 GMT
+INFO Server environment : host.name = mesos-master-2
+INFO Server environment : java.version = 1.7.0_79
+INFO Server environment : java.vendor = Oracle Corporation
+INFO Server environment : java.home = /usr/lib/jvm/java-7-openjdk-amd64/jre
+INFO Server environment : java.class.path = /etc/zookeeper/conf : /usr/share/java/jline.jar : /usr/share/java/log4j-1.2.jar : /usr/share/java/xercesImpl.jar : /usr/share/java/xmlParserAPIs.jar : /usr/share/java/netty.jar : /usr/share/java/slf4j-api.jar : /usr/share/java/slf4j-log4j12.jar : /usr/share/java/zookeeper.jar
+INFO Server environment : java.library.path = /usr/java/packages/lib/amd64 : /usr/lib/x86_64-linux-gnu/jni : /lib/x86_64-linux-gnu : /usr/lib/x86_64-linux-gnu : /usr/lib/jni : /lib : /usr/lib
+INFO Server environment : java.io.tmpdir = /tmp
+INFO Server environment : java.compiler = <NA>
+INFO Server environment : os.name = Linux
+INFO Server environment : os.arch = amd64
+INFO Server environment : os.version = 3.16.0-30-generic
+INFO Server environment : user.name = zookeeper
+INFO Server environment : user.home = /var/lib/zookeeper
+INFO Server environment : user.dir = /
+INFO Created server with tickTime 2000 minSessionTimeout 4000 maxSessionTimeout 40000 datadir /var/lib/zookeeper/version-2 snapdir /var/lib/zookeeper/version-2"
+['Created server with tickTime; Server environment;'],Received connection request; Interrupted SendWorker; Connection broken; Send worker leaving thread.,"{""summary"": ""Connection requests received, interrupted and broken"", ""anomaly"": ""Send worker leaving thread""}","INFO Received connection request /10.10.34.13 : 44168
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+INFO Received connection request /10.10.34.13 : 44169
+WARN Interrupted while waiting for message on queue
+WARN Interrupted while waiting for message on queue
+WARN Interrupting SendWorker
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Send worker leaving thread
+WARN Send worker leaving thread
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Send worker leaving thread
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.11 : 46484
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker"
+['Send worker; Received connection request; Interrupting SendWorker; Interrupted; Connection broken;'],Received connection request; Connection broken; Send worker; Interrupted;,"{""summary"": ""Connection broken, SendWorker interrupted, received connection requests"", ""anomaly"": ""Connection broken, SendWorker interrupted""}","WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+INFO Received connection request /10.10.34.11 : 46518
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.12 : 46929
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.12 : 46933
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+INFO Received connection request /10.10.34.12 : 46936
+WARN Send worker leaving thread"
+['Send worker; Received connection request; Interrupting SendWorker; Interrupted Received connection request; Connection broken;'],Received connection request; Connection broken; Send worker; Interrupted; Interrupting SendWorker;,"{""summary"": ""Connection requests received; Connection broken; Send worker left thread; Interruptions occurred"", ""anomaly"": ""Connection broken; Send worker leaving; Interruptions""}","WARN Send worker leaving thread
+INFO Received connection request /10.10.34.13 : 44225
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.13 : 44227
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+INFO Received connection request /10.10.34.13 : 44230
+WARN Interrupted while waiting for message on queue
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Send worker leaving thread
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.13 : 44234
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue"
+['Send worker; Interrupting SendWorker; Received connection request; Connection broken; Received connection request; Interrupted;'],Received connection request; Interrupted while waiting for message on queue; Connection broken; Send worker leaving thread.,"{""summary"": ""Connection requests received and broken; Send worker interrupted and left thread"", ""anomaly"": ""Repeated connection breaks and interruptions""}","INFO Received connection request /10.10.34.11 : 46574
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.11 : 46578
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.12 : 46989
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.12 : 46993
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker"
+['Send worker; Interrupting SendWorker; Connection broken; Received connection request; Interrupted;'],Received connection request; Connection broken; Send worker; Interrupted.,"{""summary"": ""Connection broken and interrupted; Send worker left"", ""anomaly"": ""Repeated connection errors and interruptions""}","WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.13 : 44285
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+INFO Received connection request /10.10.34.13 : 44287
+WARN Send worker leaving thread
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+INFO Received connection request /10.10.34.13 : 44290
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+INFO Received connection request /10.10.34.13 : 44293
+WARN Interrupted while waiting for message on queue
+WARN Connection broken for id 188978561024 , my id = 3 , error ="
+['Connection broken; Interrupting SendWorker; Send worker; Received connection request; Interrupted;'],Received connection request; Connection broken; Send worker; Interrupted; Interrupting SendWorker;,"{""summary"": ""Connection requests received, connection broken, send worker interrupted and left thread"", ""anomaly"": ""Connection broken, send worker interrupted""}","WARN Send worker leaving thread
+INFO Received connection request /10.10.34.11 : 46632
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+INFO Received connection request /10.10.34.11 : 46634
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.11 : 46638
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue
+WARN Send worker leaving thread
+INFO Received connection request /10.10.34.12 : 47049
+WARN Connection broken for id 188978561024 , my id = 3 , error =
+WARN Interrupting SendWorker
+WARN Interrupted while waiting for message on queue"
